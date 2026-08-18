@@ -1,0 +1,1192 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import Contact from '../components/Contact.astro'
+import Servicios2 from '../components/Servicios2.astro'
+import Country from '../components/icons/Country.astro';
+
+import { getImage } from "astro:assets";
+import { Image } from 'astro:assets';
+import ImgIntro from '../assets/fondo26.webp'
+const optimizedBackground = await getImage({src: ImgIntro, format: 'webp'})
+import ImgServiceIntro from '../assets/servicios2.webp'
+import CiudadEmprendedores from '../assets/ciudademp.webp'
+import Informe from '../assets/informe.webp'
+import SigloXXI from '../assets/sigloxxi.webp'
+import Andellac from '../assets/andellac.webp'
+import DonBujia from '../assets/donbujia.webp'
+
+import Pirelli from "../assets/logo-Pirelli.webp"
+import Speedee from "../assets/logospeedee.webp";
+import GoodYear from "../assets/logo-good-year.webp";
+import Michelin from "../assets/Michelin-Logo.webp";
+import Gucar from "../assets/gucar.webp";
+import Guadana from "../assets/guadana.webp";
+import Continental from "../assets/continental-logo.webp";
+import GreaseMonkey from "../assets/Grease-Monkey-Logo.webp";
+import CMG from "../assets/CMG.webp";
+import Bridgestone from "../assets/bridgestone.webp";
+import Firestone from "../assets/firestone.webp";
+
+import ImgBgOP1 from "../assets/ok-bike.webp"
+const optimizedBgOP1 = await getImage({src: ImgBgOP1, format: 'webp'})
+import ImgBgOP2 from "../assets/sisfacel.webp"
+const optimizedBgOP2 = await getImage({src: ImgBgOP2, format: 'webp'})
+import ImgBgOP3 from "../assets/grado-escolar.webp"
+const optimizedBgOP3 = await getImage({src: ImgBgOP3, format: 'webp'})
+import ImgBgOP4 from "../assets/condominio-24.webp"
+const optimizedBgOP4 = await getImage({src: ImgBgOP4, format: 'webp'})
+
+import ImgBgCard from '../assets/taller-mecanico1.webp'
+const optimizedBgCard = await getImage({src: ImgBgCard, format: 'webp'})
+
+import Bronce from '../assets/bronce.webp';
+import Plata from '../assets/plata.webp';
+import Oro from '../assets/oro.webp';
+import Pago from '../assets/pago.webp';
+
+---
+
+
+<Layout title="Software para administrar su taller mecánico - OK CAR" description="OK CAR es un software que apoya a los talleres mecánicos a controlar sus actividades administrativas, operativas y financieras." robots="index,follow">
+	
+	<main class="overflow-x-hidden">
+
+
+		<section class="relative ">
+
+			<div style={`background-image: url(${optimizedBackground.src});`} class="bg-cover bg-left 2xl:bg-right py-44 relative xl:py-36 2xl:py-48">
+				<div id="overlay-intro" class="absolute z-0 w-full h-full   top-0"></div>
+				<div class="px-4 max-w-6xl m-auto md:ml-16 relative text-white">
+					<h1 class="text-4xl md:text-5xl lg:text-7xl text-center lg:text-left uppercase md:ml-4 font-bold leading-tight">
+						<span class="block">Software #1</span>
+						<span class="block">Administración de</span>
+						<span class="block text-lighter">talleres mecánicos</span>
+					</h1>
+					<p class="text-lg md:text-xl max-w-3xl m-auto text-center lg:text-left mt-6 md:ml-4">OK CAR es el software de gestión ideal para tu taller mecánico. ¡Conoce tu nuevo asistente de <strong class="text-sky-400">Inteligencia Artificial</strong> "Don Bujía" y mejora tus procesos operativos! PRUÉBALO GRATIS POR 1 MES.
+		
+					</p>
+					<div class="grid md:inline-flex mt-8 w-full place-content-center lg:justify-start gap-6">
+						<Button
+						href="/#contact"
+						name="Solicitar cotización "
+						style="block text-white font-bold duration-200 focus-visible:outline-black focus-visible:ring-black focus:outline-none items-center justify-center px-6 rounded-xl text-center inline-flex py-3 hover:text-white bg-gradient-to-r from-primary to-lighter hover:opacity-80"
+						/>
+						<Button
+						href="/#servicios"
+						name="Nuestros servicios "
+						style="block text-white font-bold border duration-200 focus-visible:outline-black focus-visible:ring-black focus:outline-none items-center justify-center px-6 rounded-xl text-center inline-flex py-3 hover:text-white bg-transparent hover:bg-secondary/80"
+						/>
+					</div>
+				</div>
+				
+			</div>			
+			
+		</section>
+
+		<!-- Estadísticas -->
+		<section class="bg-gray-50 relative">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-gray-200">
+
+				<div class="stat-fill group relative overflow-hidden text-center py-8 px-4 bg-gradient-to-b from-slate to-white">
+					<span aria-hidden="true" class="stat-fill-bg absolute inset-x-0 bottom-0 h-0 bg-gradient-to-b from-primary to-lighter transition-all duration-500 ease-out group-hover:h-full"></span>
+					<div class="relative z-10">
+						<p class="font-bold text-red-600 group-hover:text-white transition-colors duration-300 text-2xl md:text-4xl">+ 3,6 Millones</p>
+						<p class="mt-1 text-base md:text-lg group-hover:text-white transition-colors duration-300">Órdenes de servicio generadas</p>
+					</div>
+				</div>
+
+				<div class="stat-fill group relative overflow-hidden text-center py-8 px-4 bg-gradient-to-b from-slate to-white">
+					<span aria-hidden="true" class="stat-fill-bg absolute inset-x-0 bottom-0 h-0 bg-gradient-to-b from-primary to-lighter transition-all duration-500 ease-out group-hover:h-full"></span>
+					<div class="relative z-10">
+						<p class="font-bold text-red-600 group-hover:text-white transition-colors duration-300 text-2xl md:text-4xl">+ 8,2 Millones</p>
+						<p class="mt-1 text-base md:text-lg group-hover:text-white transition-colors duration-300">Facturas y remisiones generadas</p>
+					</div>
+				</div>
+
+				<div class="stat-fill group relative overflow-hidden text-center py-8 px-4 bg-gradient-to-b from-slate to-white">
+					<span aria-hidden="true" class="stat-fill-bg absolute inset-x-0 bottom-0 h-0 bg-gradient-to-b from-primary to-lighter transition-all duration-500 ease-out group-hover:h-full"></span>
+					<div class="relative z-10">
+						<p class="font-bold text-red-600 group-hover:text-white transition-colors duration-300 text-2xl md:text-4xl">+ 2,000</p>
+						<p class="mt-1 text-base md:text-lg group-hover:text-white transition-colors duration-300">Usuarios activos confían en nosotros</p>
+					</div>
+				</div>
+
+				<div class="stat-fill group relative overflow-hidden text-center py-8 px-4 bg-gradient-to-b from-slate to-white">
+					<span aria-hidden="true" class="stat-fill-bg absolute inset-x-0 bottom-0 h-0 bg-gradient-to-b from-primary to-lighter transition-all duration-500 ease-out group-hover:h-full"></span>
+					<div class="relative z-10">
+						<p class="font-bold text-red-600 group-hover:text-white transition-colors duration-300 text-2xl md:text-4xl">6 Países</p>
+						<div class="mt-2 w-2/3 mx-auto">
+							<Country/>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- <iframe class="aspect-video w-[90%] md:w-[720px] rounded-xl relative mx-auto self-center my-8" src="https://lite-youtube-embed-iframe.vercel.app/embed/Fwj6UTHx0ag"></iframe> -->
+
+
+		<!--Servicios -->
+		
+		
+		
+<section class="bg-white">
+    <div class="w-full px-8 py-12  md:px-12 lg:px-24  lg:-mt-4">
+      <div class="max-w-3xl lg:mx-auto lg:text-center">
+        <div>
+            <h3 class="text-sm text-primary tracking-widest uppercase font-semibold">
+                nuestros servicios</h3>
+          <h1 class="text-3xl md:text-4xl mt-8 lg:text-6xl font-extrabold tracking-tight text-black uppercase text-left">
+            Todo en un solo sistema
+		  </h1>
+        </div>
+        
+    </div>
+      <div>
+        <Image  src={ImgServiceIntro} class="w-full object-contain max-w-5xl m-auto" alt="imagen del software para talleres mecanicos okcar en varios dispositivos: computadora, tablet y celular"/>
+      </div>
+
+	</div>
+
+
+</section>
+
+
+<section id="servicios" >
+	<Servicios2></Servicios2>
+</section>	  
+
+			<div class="bg-gradient-to-br from-blue-500 via-blue-600 to-blue-50 scale-90 grid grid-cols-1 md:grid-cols-2 mx-4 md:mx-16 lg:mx-32 rounded-3xl bg-opacity-70 shadow-xl md:flex md:justify-between md:h-[300px] lg:h-[400px] hover:scale-95 duration-300">
+        
+        <div class="service-content pl-8 py-4 lg:pl-16 pr-8 md:pr-0 grid content-evenly h-full self-stretch">
+            <p class="text-2xl md:text-3xl lg:text-4xl font-semibold text-white">¡Conoce a Don Bujía!</p>
+            <p class="text-white text-md lg:text-lg xl:text-2xl ">Dicta o redacta los problemas del vehículo, y obtén Diagnósticos y Recomendaciones de Revisión Personalizados. ¡ASÍ DE FÁCIL! ¡Prueba tu nuevo asesor de mantenimiento por 1 mes GRATIS!</p>
+				<!-- <a href="https://youtu.be/69_68yd9vVM?si=IX9A1IUV4UTnnIyL" class="block text-sky-800 font-bold duration-200 px-3 rounded-xl text-center w-fit py-2 hover:text-white bg-sky-100 hover:bg-sky-600" target="_blank">
+				&#9658; Ve el video</a> -->
+					<Button
+					href="/#contact"
+					name="Solicitar demo "
+					style="block text-white font-bold duration-200 focus-visible:outline-black focus-visible:ring-black focus:outline-none items-center justify-center px-6 rounded-xl text-center inline-flex md:w-[55%] py-3 hover:text-white bg-primary hover:bg-secondary/80"
+					/>
+        </div>
+        <Image src={DonBujia} class="service-content h-[200px] w-[200px] md:h-[300px] md:w-[300px] lg:h-[450px] lg:w-[450px] overflow-visible self-end place-self-center" alt=""/>
+			</div>
+			
+			
+		<!--Any desk -->
+		<section class="hidden lg:grid relative border-t border-white/5 overflow-hidden">
+			<div class="items-center w-full px-8 pt-20 mx-auto md:px-12 lg:px-24 max-w-7xl lg:pt-40">
+			  <div class="relative items-center">
+				<div class="w-full lg:grid lg:grid-cols-2 justify-between lg:items-center">
+				  <div class="max-w-xl">
+					<span id="contrax" class="font-semibold text-primary text-sm tracking-widest uppercase">conexión  remota</span>
+					<p class="text-2xl mt-8 font-medium tracking-tight text-black">
+						Una vez siendo cliente, te recomendamos descargar la siguiente herramienta para conectarnos a tu ordenador, apoyarte a resolver dudas del sistema y brindarte un mejor servicio.
+
+					</span>
+					</p>
+				  </div><div class="mt-16 lg:mt-32 grid lg:inline-flex items-end lg:justify-end gap-8">
+					<Button
+					href="/#contact"
+					name="Solicitar demo "
+					style="block text-white font-bold duration-200 focus-visible:outline-black focus-visible:ring-black focus:outline-none items-center justify-center px-6 rounded-xl text-center inline-flex py-3 hover:text-white bg-primary  hover:bg-secondary/80"
+					/>
+					<Button
+					href="https://anydesk.com/"
+					name="Descargar AnyDesk "
+					style="block text-black font-bold border duration-200 focus-visible:outline-black focus-visible:ring-black focus:outline-none items-center justify-center px-6 rounded-xl text-center inline-flex py-3 hover:text-white bg-transparent  hover:bg-secondary/80"
+					/>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </section>
+
+			<section id="capacitacion" class="bg-white">
+				<div class="w-full  py-12 max-w-6xl m-auto  lg:py-32">
+					<div class="max-w-3xl px-8 lg:mx-auto lg:text-center">
+						<div>
+							<h3 class="text-sm tracking-widest text-primary uppercase font-semibold">
+								Capacitación </h3>
+						
+						<p class="text-3xl mt-8 md:text-5xl lg:text-6xl font-bold tracking-tight text-black">
+							Explota todo el potencial de OK CAR
+						</p>
+						</div>
+						
+					</div>
+					<div class="grid md:hidden relative justify-end px-8">
+						<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+
+					<dotlottie-player src="https://lottie.host/3c0a3605-d376-4854-9bc0-8e8d9a3b1b39/xOCtlfS1es.json" background="transparent" class="absolute right-0 -top-4" speed="1" style="width: 90px; height: 90px;" loop autoplay></dotlottie-player>
+					</div>
+					
+				<div class=" md:py-16 ">
+					<!-- Additional required wrapper -->
+					
+					<div class="carousel pb-12 carousel-center px-4 gap-6 w-screen mx-auto md:w-full grid-cols-1 md:grid md:grid-cols-2 lg:grid-cols-3 mt-16  md:gap-10">
+						<div class="carousel-item shadow md:box-learn w-full box-learn grid items-start rounded-3xl">
+							<div id="box-learn" class="grid h-full">
+								<div class="iframe-container">
+									<iframe class="aspect-video w-full rounded-t-2xl relative" src="https://lite-youtube-embed-iframe.vercel.app/embed/MFs8l3t2RIs" loading="lazy"></iframe>
+								</div>
+
+								<div class="px-8 py-8">
+									<h4 class="text-2xl font-bold mb-4">Conoce OK CAR			</h4>
+									<p class="text-xl mb-6">El software #1 para talleres mecánicos te esta esperando.</p>
+									<a href="https://www.youtube.com/watch?v=MFs8l3t2RIs" target="_blank" class="inline-flex gap-1 items-center text-primary font-medium text-xl">Ver el video
+										<svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36 24.0083H12" stroke="#f00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 12L36 24L24 36" stroke="#f00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>				  	  
+									</a>	
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item shadow md:box-learn w-full box-learn grid items-start rounded-3xl">	
+							<div id="box-learn" class="grid h-full ">
+								<div class="iframe-container">
+									<iframe class="aspect-video w-full rounded-t-2xl relative" src="https://lite-youtube-embed-iframe.vercel.app/embed/HmZDu7IylSE" loading="lazy"></iframe>
+								</div>
+
+								<div class="px-8 py-8">
+									<h4 class="text-2xl font-bold mb-4">Recibe y gestiona a tus clientes donde quieras
+									</h4>
+									<p class="text-xl mb-6">Optimiza los procesos de tu taller en nuestro portal web.
+
+									</p>
+									<a href="https://youtu.be/HmZDu7IylSE?si=DQJLsJUkvt7TlrcH" target="_blank" class="inline-flex gap-1 items-center text-primary font-medium text-xl">Ver el video
+										<svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36 24.0083H12" stroke="#f00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 12L36 24L24 36" stroke="#f00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>				  	  
+									</a>	
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item shadow md:box-learn w-full box-learn grid items-start rounded-3xl">
+							<div id="box-learn" class="grid h-full">
+								<div class="iframe-container">
+									<iframe class=" aspect-video w-full rounded-t-2xl relative" src="https://lite-youtube-embed-iframe.vercel.app/embed/xXrtNN9595M" loading="lazy"></iframe>
+								</div>
+
+								<div class="px-8 py-8">
+									<h4 class="text-2xl font-bold mb-4">Incrementa tus ventas			</h4>
+									<p class="text-xl mb-6">Conoce como podrás incrementar tus ventas hasta un 35% con esta función única.</p>
+									<a href="https://youtu.be/xXrtNN9595M?si=D6xj56ow6fwzMXEt" target="_blank" class="inline-flex gap-1 items-center text-primary font-medium text-xl">Ver el video
+										<svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36 24.0083H12" stroke="#f00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 12L36 24L24 36" stroke="#f00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>				  	  
+									</a>	
+								</div>
+							</div>
+						</div>
+
+					</div>
+					
+				</div>
+
+
+			</section>
+<!--New precio--> 
+<section id="precios" class=" relative overflow-hidden">
+	<div class="px-8 mx-auto md:px-12 xl:px-32 max-w-7xl  relative">
+		<div class="max-w-3xl lg:mx-auto lg:text-center">
+			<div>
+				<h3 class="text-sm tracking-widest text-primary uppercase font-semibold">
+					Precios </h3>
+			
+			<p class="text-3xl mt-8 md:text-5xl lg:text-6xl font-bold tracking-tight text-black">
+				Equipa tu taller con un software completo
+			</p>
+			<p class="mt-6">Prueba nuestro demo de acceso libre.
+				Nuestros precios son por sucursal.
+				Ahorra 25% contratando con nuestros planes.</p> <br>
+			<p class="inline-flex gap-1 items-center text-primary font-small text-m"> Paga en transferencia, en tu tienda de conveniencia más cercana, o con tarjetas de crédito: VISA, Mastercard, o American Express. </p>
+			<div class="grid place-content-center text-primary hover:text-secondary mb-6 text-5xl font-bold" data-astro-cid-j7pv25f6>
+				<Image src={Pago} class="w-[300px]" alt=""/>
+			</div>
+			</div>
+
+			
+		</div>
+		<script>
+			const tableWrapper = document.querySelector("#precios-contenido");
+			const switchInputs = document.querySelectorAll(".switch-wrapper input");
+			const prices = tableWrapper.querySelectorAll(".price");
+			const toggleClass = "hide";
+
+			for (const switchInput of switchInputs) {
+			switchInput.addEventListener("click", function () {
+				for (const price of prices) {
+				price.classList.add(toggleClass);
+				}
+				const activePrices = tableWrapper.querySelectorAll(
+				`.price.${switchInput.id}`
+				);
+				for (const activePrice of activePrices) {
+				activePrice.classList.remove(toggleClass);
+				}
+			});
+			}
+
+
+		</script>
+		<div class="w-full inline-flex place-content-center my-12 lg:mt-12">
+			<div class="switch-wrapper">
+				<input id="monthly" type="radio" name="switch" >
+				<input id="months" type="radio" name="switch">
+				<input id="yearly" type="radio" name="switch" checked>
+				<label for="monthly">
+					<span class="switch-label">
+						<span class="switch-title">Mensual</span>
+					</span>
+				</label>
+				<label for="months">
+					<span class="switch-label">
+						<span class="switch-title">4 Meses</span>
+						<span class="switch-badge">Ahorra 1 mes</span>
+					</span>
+				</label>
+				<label for="yearly">
+					<span class="switch-label">
+						<span class="switch-title">Anual</span>
+						<span class="switch-badge">Ahorra 3 meses</span>
+					</span>
+				</label>
+				<span class="highlighter"></span>
+			  </div>
+		  </div>
+		
+
+
+		<div id="precios-contenido" class="grid gap-4  md:grid-cols-2 lg:grid-cols-3 ">
+
+			<div class="p-4 md:p-8 bg-white rounded-3xl shadow-sm">
+				<div class="flex flex-col">
+					<div class="flex-shrink-0 block">
+						<div class="flex items-center">
+							<div class="">
+								<p class="text-xs font-medium ">Para talleres que van iniciando
+								</p>
+								<Image src={Bronce} class="w-[150px]" alt=""/>
+							</div>
+						</div>
+					</div>
+					<div class="mt-6">
+						<p class="price monthly mt-8 text-4xl font-semibold tracking-tight lg:text-5xl text-red-600"> $699<span class="text-xs font-normal tracking-normal "> + IVA MXN /Mes </span></p>
+						<p class="price months hide mt-8 text-4xl font-semibold tracking-tight lg:text-5xl text-red-600"> $699<span class="text-xs font-normal tracking-normal "> + IVA MXN /Mes </span></p>
+						<p class="price yearly hide mt-8 text-4xl font-semibold tracking-tight lg:text-5xl text-red-600"> $699<span class="text-xs font-normal tracking-normal "> + IVA MXN /Mes
+						</span>
+					</p>
+					<p class=" mt-2 text-2xl font-semibold tracking-tight lg:text-2xl text-gray-500"> Solo disponible en plan mensual.
+					</p>
+
+					<!-- <p class="price monthly mt-8 text-2xl font-semibold tracking-tight lg:text-3xl text-red-700"> $37<span class="text-xs font-normal tracking-normal "> + IVA USD /Mes </span></p>
+					<p class="price months hide mt-8 text-2xl font-semibold tracking-tight lg:text-3xl text-red-700"> $37<span class="text-xs font-normal tracking-normal "> + IVA USD /Mes </span></p>
+					<p class="price yearly hide mt-8 text-2xl font-semibold tracking-tight lg:text-3xl text-red-700"> $37<span class="text-xs font-normal tracking-normal "> + IVA USD /Mes
+					</span>
+				</p> -->
+
+
+					</div>
+					
+					
+					<div class="mt-8">
+						<ul class="flex flex-col order-last text-sm  gap-y-3" role="list">
+							<li class="flex flex-row items-center gap-2">
+								 <span>• 2 Usuarios</span> </li>
+							<li class="flex flex-row items-center gap-2">
+								 <span>• Facturación (Incluye 100 CFDI)								</span> </li>
+							<li class="flex flex-row items-center gap-2">
+								 <span>• Clientes ilimitados</span> </li>
+							<li class="flex flex-row items-center gap-2">
+								 <span>• Vehículos ilimitados</span> </li>
+							<li class="flex flex-row items-center gap-2">
+								 <span>• Catálogo de productos ilimitado</span> 
+							</li>
+							<li class="flex flex-row items-center gap-2">
+								 <span>• Módulo de almacén</span> 
+							</li>
+							<li class="flex flex-row items-center gap-2">
+								 <span>• Capacitación por videos y una hora por videoconferencia</span> 
+							</li>
+							<li class="flex flex-row items-center gap-2">
+								 <span>• Soporte técnico vÍa Email</span> 
+							</li>
+							<li class="flex flex-row items-center gap-2">
+								 <span>• Notificaciones Email y
+									WhatsApp sin costo adicional</span> 
+							</li>
+							<li class="flex flex-row items-center gap-2">
+								 <span>• Logotipos en formatos del taller</span> 
+							</li>
+						</ul>
+						<div class="collapse  bg-base-200">
+							<input type="checkbox" /> 
+							<div class="bg-gray inline-flex p-0 items-center gap-2 collapse-title !text-[15px] font-medium">
+							  Ver más funcionalidades
+							  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+							  </svg>
+							  
+							</div>
+							<div class="collapse-content  px-0">
+								<ul class="flex flex-col  order-last text-sm  gap-y-3" role="list">
+									Módulos de:
+									<li class="flex flex-row items-center gap-2">
+										 <span>• Órdenes de servicio</span> 
+									</li>
+									<li class="flex flex-row items-center gap-2">
+										 <span>• Inventario</span> 
+									</li>
+									<li class="flex flex-row items-center gap-2">
+										 <span>• Proveedores</span> 
+									</li>
+									<li class="flex flex-row items-center gap-2">
+										 <span>• Estatus de órdenes de servicio</span> 
+									</li>
+									<li class="flex flex-row items-center gap-2">
+										 <span>• Historial</span> 
+									</li>
+									<li class="flex flex-row items-center gap-2">
+										 <span>• Cuentas por cobrar</span> 
+									</li>
+									<li class="flex flex-row items-center gap-2">
+										 <span>• Cuentas por pagar</span> 
+									</li>
+									<li class="flex flex-row items-center gap-2">
+										 <span>• Estados de cuenta</span> 
+									</li>
+								</ul>							
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class=" shadow-sm   relative">
+				<div class="bg-red-600 absolute left-0 right-0 -top-[22px] text-white w-1/2 text-center rounded-t-xl mx-auto">El más cotizado</div>
+				<div class="flex p-4 md:p-8 flex-col rounded-xl  relative border border-red-600 border-2">
+					<div class="flex-shrink-0 block">
+						<div class="flex items-center">
+							<div class="">
+								<p class="text-xs font-medium">Ideal para talleres medianos</p>
+								<Image src={Plata} class="w-[150px]" alt=""/>
+							</div>
+						</div>
+					</div>
+					<div class="mt-6">
+						
+						<p class="price monthly hide mt-8 text-4xl font-semibold tracking-tight text-red-600 lg:text-5xl "> $1,680<span class="text-xs font-normal tracking-normal text-red-600"> + IVA MXN/Mes </span></p>
+						<p class="price months hide mt-8 text-4xl font-semibold tracking-tight lg:text-5xl text-red-600"> $1,260<span class="text-xs font-normal tracking-normal "> + IVA MXN /Mes </span></p>
+						<p class="price yearly mt-8 text-4xl font-semibold tracking-tight text-red-600 lg:text-5xl"> $1,260<span class="text-xs font-normal tracking-normal text-red-600"> + IVA MXN /Mes
+						</span>
+					</p>
+					<p class="price months hide mt-2 text-2xl font-light tracking-tight lg:text-2xl text-gray-500 line-through"> $1,680 /mes
+					</p>
+					<p class="price months hide mt-2 text-2xl font-semibold tracking-tight lg:text-2xl text-gray-600"> ¡Ahorra 1 mes en pago de 4 meses!
+					</p>
+					<p class="price yearly mt-2 text-2xl font-light tracking-tight lg:text-2xl text-gray-500 line-through"> $1,680 /mes
+					</p>
+					<p class="price yearly mt-2 text-2xl font-semibold tracking-tight lg:text-2xl text-gray-600"> ¡Ahorra 3 meses en pago anual!
+					</p> 
+
+					<!-- <p class="price monthly mt-8 text-2xl font-semibold tracking-tight lg:text-3xl text-red-700"> $89<span class="text-xs font-normal tracking-normal "> + IVA USD /Mes </span></p>
+					<p class="price months hide mt-8 text-2xl font-semibold tracking-tight lg:text-3xl text-red-700"> $66<span class="text-xs font-normal tracking-normal "> + IVA USD /Mes
+					</span>
+					<p class="price yearly hide mt-8 text-2xl font-semibold tracking-tight lg:text-3xl text-red-700"> $66<span class="text-xs font-normal tracking-normal "> + IVA USD /Mes
+					</span> -->
+				</p>
+						
+					</div>
+					<div class="mt-8">
+						<p class="text-sm font-medium mb-4"> Todo lo del Plan Bronce y...
+						</p>
+						<ul class="flex flex-col order-last text-sm gap-y-3" role="list">
+							<li class="flex flex-row items-center gap-2">
+								 <span>• Usuarios ilimitados</span> </li>
+							<li class="flex flex-row items-center gap-2">
+								 <span>• Facturación ilimitada								</span> </li>
+							<li class="flex flex-row items-center gap-2">
+								 <span>• Almacenes ilimitados</span> </li>
+							<li class="flex flex-row items-center gap-2">
+								 <span>• Capacitación ilimitada personalizada</span> </li>
+							<li class="flex flex-row items-center gap-2">
+								 <span>• Soporte ilimitado personalizado</span> 
+							</li>
+							<li class="flex flex-row items-center gap-2">
+								 <span>• Configuración de formatos en facturas y órdenes de servicio</span> 
+							</li>
+							<li class="flex flex-row items-center gap-2">
+								 <span>• Fotografías en recepción y cotizaciones</span> 
+							</li>
+							<li class="flex flex-row items-center gap-2">
+								 <span>• Puntos de revisión</span> 
+							</li>
+							<li class="flex flex-row items-center gap-2">
+								 <span>• Recordatorios de servicios próximos a expirar</span> 
+							</li>
+							<li class="flex flex-row items-center gap-2">
+								 <span>• Automatización de mensajes</span> 
+							</li>
+							<li class="flex flex-row items-center gap-2">
+								<span>• Encuestas de Satisfacción</span> 
+						   </li>
+						</ul>
+						<div class="collapse  bg-base-200">
+							<input type="checkbox" /> 
+							<div class="bg-gray inline-flex items-center gap-2 p-0 collapse-title !text-[15px] font-medium">
+							  Ver más funcionalidades
+							  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+							  </svg>
+							  
+							</div>
+							<div class="collapse-content  px-0">
+								<ul class="flex flex-col  order-last text-sm gap-y-3" role="list">
+								
+									<li class="flex flex-row items-center gap-2">
+										 <span>• Seguimiento a cotizaciones no autorizadas</span> 
+									</li>
+									<li class="flex flex-row items-center gap-2">
+										 <span>• Cálculo de comisión para mecánicos</span> 
+									</li>
+									<li class="flex flex-row items-center gap-2">
+										 <span>• Listas de precios</span> 
+									</li>
+									<li class="flex flex-row items-center gap-2">
+										 <span>• Configuración de seguridad por
+											usuario</span> 
+									</li>
+									<li class="flex flex-row items-center gap-2">
+										 <span>• Banco / Caja</span> 
+									</li>
+									<li class="flex flex-row items-center gap-2">
+										 <span>• Kardex por proveedor</span> 
+									</li>
+	
+									<li class="flex flex-row items-center gap-2">
+										 <span>• Módulo de Reportes</span> 
+									</li>
+								</ul>							
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="p-4 md:p-8 bg-white rounded-3xl shadow-sm">
+				<div class="flex flex-col">
+					<div class="flex-shrink-0 block">
+						<div class="flex items-center">
+							<div class="">
+								<p class="text-xs font-medium ">Para talleres que quieren más
+								</p>
+								<Image src={Oro} class="w-[150px]" alt=""/>
+							</div>
+						</div>
+					</div>
+					<div class="mt-6">
+						<p class="price monthly hide mt-8 text-4xl font-semibold tracking-tight lg:text-5xl text-red-600"> $1,990<span class="text-xs font-normal tracking-normal "> + IVA MXN/Mes </span></p>
+						<p class="price months hide mt-8 text-4xl font-semibold tracking-tight lg:text-5xl text-red-600"> $1,492<span class="text-xs font-normal tracking-normal "> + IVA MXN /Mes
+						</span>
+						<p class="price yearly mt-8 text-4xl font-semibold tracking-tight lg:text-5xl text-red-600"> $1,492<span class="text-xs font-normal tracking-normal "> + IVA MXN /Mes
+						</span>
+					</p>
+					<p class="price months hide mt-2 text-2xl font-light tracking-tight lg:text-2xl text-gray-500 line-through">  $1,990 /mes
+					</p>
+					<p class="price months hide mt-2 text-2xl font-semibold tracking-tight lg:text-2xl text-gray-600"> ¡Ahorra 1 mes en pago de 4 meses!
+					</p>
+
+					<p class="price yearly mt-2 text-2xl font-light tracking-tight lg:text-2xl text-gray-500 line-through"> $1,990 /mes
+					</p>
+					<p class="price yearly mt-2 text-2xl font-semibold tracking-tight lg:text-2xl text-gray-600"> ¡Ahorra 3 meses en pago anual!
+					</p>
+
+					<!-- <p class="price monthly mt-8 text-2xl font-semibold tracking-tight lg:text-3xl text-red-700"> $104<span class="text-xs font-normal tracking-normal "> + IVA USD /Mes </span></p>
+					<p class="price months hide mt-8 text-2xl font-semibold tracking-tight lg:text-3xl text-red-700"> $79<span class="text-xs font-normal tracking-normal "> + IVA USD /Mes
+					</span>
+					<p class="price yearly hide mt-8 text-2xl font-semibold tracking-tight lg:text-3xl text-red-700"> $79<span class="text-xs font-normal tracking-normal "> + IVA USD /Mes
+					</span> -->
+				</p>
+
+					</div>
+					
+					<div class="mt-8">
+						<p class="text-sm mb-4 font-medium"> Todo lo del Plan Plata y...
+						</p>
+						<ul class="flex flex-col order-last text-sm  gap-y-3" role="list">
+							<li class="flex flex-row items-center gap-2">
+								 <span>• Dashboard ejecutivo con KPI</span> </li>
+								 
+							<li class="flex flex-row items-center gap-2">
+								 <span>Aplicación móvil disponible en Android y iOS para los clientes del taller, donde podrán acceder a:								</span> </li>
+							<li class="flex flex-row items-center gap-2">
+								 <span>• Monedero electrónico (Plan de lealtad) </span> </li>
+							<li class="flex flex-row items-center gap-2">
+								 <span>• Historial por Vehículo</span> </li>
+							<li class="flex flex-row items-center gap-2">
+								 <span>• Próximos servicios a realizar</span> 
+							</li>
+							<li class="flex flex-row items-center gap-2">
+								<span>• Generación de citas en tu taller</span> 
+						   </li>
+							<li class="flex flex-row items-center gap-2">
+								 <span>• Promociones especiales</span> 
+							</li>
+							
+						</ul>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--Casos de éxito  -->
+<section class="relative overflow-x-hidden py-16" aria-labelledby="testimonials" >
+	
+	<div id="clientes" class="relative mx-auto max-w-7xl md:px-12 lg:px-32 px-8 py-12 lg:pt-24">
+		<div>
+			<div class="grid grid-cols-1 items-center gap-4 xl:gap-12 xl:grid-cols-3">
+				<div><h3 class="text-xs tracking-widest uppercase text-primary font-medium">Casos de éxito </h3>
+					<p class="text-black mt-8 font-bold text-3xl">Integraron el software OK CAR en su flujo de trabajo</p>
+				</div>
+				<div class="xl:col-span-2">
+					<p class="text-lg text-slate-400 max-w-2xl">Nuestra solución se adapta a las necesidades y al tamaño de su empresa. Trabajamos con pequeños, medianos y grandes talleres. Buscamos proveer servicios de calidad con un acompañamiento personalizado.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="pb-6 max-w-6xl  mx-auto 2xl:max-7xl">
+			<div class="relative  overflow-hidden">
+				<div class="grid justify-between w-full">
+					<div class="z-10 absolute  from-white inset-0 left-0 via-transparent w-40 bg-gradient-to-r"></div>
+					<div class="z-10 absolute  from-white inset-0 left-0 via-transparent w-40 bg-gradient-to-l ml-auto"></div>
+				</div>
+				<div id="brand-img" class="inline-flex max-h-72 gap-10 items-center">
+					<a href="#" class="" target="_blank">
+						<Image  src={Pirelli} alt="logo pirelli" />
+					  </a>
+					  <a href="https://www.speedee.com.mx/" class="" target="_blank">
+						<Image  src={Speedee} alt="logo speedee" />
+					  </a>
+					  <a href="https://gucar.com.mx/" class="" target="_blank"><Image  src={Gucar} alt="logo gucar" /></a>
+
+					  <a href="#" class="" target="_blank">
+						<Image  src={GoodYear} alt="logo good year" />
+					  </a>
+					  <a href="#" class="" target="_blank">
+						<Image  src={Michelin} alt="logo michelin" />
+					  </a>
+					  
+					<a href="#" class="" target="_blank">
+						<Image  src={Guadana} alt="logo guadana" />
+					  </a>
+					  <a href="#" class="" target="_blank">
+						<Image  src={Continental} alt="logo continental" />
+					  </a>
+					  <a href="#" class="" target="_blank">
+						<Image  src={GreaseMonkey} alt="logo grease monkey" />
+					  </a>
+					  <a href="#" class="" target="_blank">
+						<Image  src={CMG} alt="logo CMG" />
+					  </a>
+					  <a href="#" class="" target="_blank">
+						<Image  src={Bridgestone} alt="logo bridgestone" />
+					  </a>
+					  <a href="#" class="" target="_blank">
+						<Image  src={Firestone} alt="logo firestone" />
+					  </a>
+					  <a href="#" class="" target="_blank">
+						<Image  src={Pirelli} alt="logo pirelli" />
+					  </a>
+					  <a href="https://www.speedee.com.mx/" class="" target="_blank">
+						<Image  src={Speedee} alt="logo speedee" />
+					  </a>
+					  <a href="https://gucar.com.mx/" class="" target="_blank"><Image  src={Gucar} alt="logo gucar" /></a>
+
+					  <a href="#" class="" target="_blank">
+						<Image  src={GoodYear} alt="logo good year" />
+					  </a>
+					  <a href="#" class="" target="_blank">
+						<Image  src={Michelin} alt="logo michelin" />
+					  </a>
+					  <a href="#" class="" target="_blank">
+						<Image  src={Guadana} alt="logo guadana" />
+					  </a>
+					  <a href="#" class="" target="_blank">
+						<Image  src={Continental} alt="logo continental" />
+					  </a>
+					  <a href="#" class="" target="_blank">
+						<Image  src={GreaseMonkey} alt="logo grease monkey" />
+					  </a>
+					  <a href="#" class="" target="_blank">
+						<Image  src={CMG} alt="logo CMG" />
+					  </a>
+				</div>
+			</div>
+	</div>
+
+	<div id="clientes" class="relative mx-auto max-w-7xl md:px-12 lg:px-32 px-8 py-12">
+		
+	<div>
+		<div class="grid grid-cols-1 items-center gap-4 xl:gap-12 xl:grid-cols-3">
+			<div><h3 class="text-xs tracking-widest uppercase text-primary font-medium">Artículos </h3>
+				<p class="text-black mt-8 font-bold text-3xl">Nuestro trabajo habla por nosotros</p>
+			</div>
+			<div class="xl:col-span-2">
+				<p class="text-lg text-slate-400 max-w-2xl">Conoce más de OK CAR con algunos de los artículos que se han publicado sobre el sistema.</p>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 xl:px-16 items-center pt-4 px-16 md:px-10 lg:px-20 xl:px-48 pb-16">
+		<div class="duration-300 bg-white rounded-lg shadow-lg overflow-hidden w-300 hover:shadow-xl hover:scale-105">
+			<Image  src={CiudadEmprendedores} class="w-full object-contain max-w-5xl m-auto" alt="imagen del software para talleres mecanicos okcar en varios dispositivos: computadora, tablet y celular"/>
+			<div class="p-2">
+				<p class="font-bold">Mejora la administración</p>
+				<Button
+				href="https://ciudademprendedores.com/mexico/mejorar-la-administracion-de-talleres-mecanicos-con-el-software-de-gestion-de-ok-car/"
+				name="Ver artículo"
+				style="block text-white font-bold duration-200 px-3 rounded-xl text-center w-fit py-2 hover:text-white bg-primary hover:bg-secondary/80"
+				/>
+			</div>
+		</div>
+
+		<div class="duration-300 bg-white rounded-lg shadow-lg overflow-hidden w-300 hover:shadow-xl hover:scale-105 items-center">
+			<Image  src={Andellac} class="w-full object-contain m-auto" alt="imagen del software para talleres mecanicos okcar en varios dispositivos: computadora, tablet y celular"/>
+			<div class="p-2">
+				<p class="font-bold">Andellac Magazine No.111</p>
+				<Button
+				href="https://v.calameo.com/?bkcode=003177287b3231b55d9d3&page=26"
+				name="Ver artículo"
+				style="block text-white font-bold duration-200 px-3 rounded-xl text-center w-fit py-2 hover:text-white bg-primary hover:bg-secondary/80"
+				/>
+			</div>
+		</div>
+
+		<div class="duration-300 bg-white rounded-lg shadow-lg overflow-hidden w-300 hover:shadow-xl hover:scale-105">
+			<Image  src={SigloXXI} class="w-full object-contain max-w-5xl m-auto" alt="imagen del software para talleres mecánicos okcar en varios dispositivos: computadora, tablet y celular"/>
+			<div class="p-2">
+				<p class="font-bold">Intuitivo e Inteligente</p>
+				<Button
+				href="https://www.diariosigloxxi.com/texto-diario/mostrar/4926851/okcar-software-intuitivo-e-inteligente-multiples-beneficios-gestion-integral-talleres-mecanicos"
+				name="Ver artículo"
+				style="block text-white font-bold duration-200 px-3 rounded-xl text-center w-fit py-2 hover:text-white bg-primary hover:bg-secondary/80"
+				/>
+			</div>
+		</div>
+
+		<div class="duration-300 bg-white rounded-lg shadow-lg overflow-hidden w-300 hover:shadow-xl hover:scale-105">
+			<Image  src={Informe} class="w-full object-contain max-w-5xl m-auto" alt="imagen del software para talleres mecanicos okcar en varios dispositivos: computadora, tablet y celular"/>
+			<div class="p-2">
+				<p class="font-bold">La solución definitiva</p>
+				<Button
+				href="https://informeanualrsf.es/mexico/ok-car-la-solucion-definitiva-para-la-administracion-de-talleres-mecanicos/"
+				name="Ver artículo"
+				style="block text-white font-bold duration-200 px-3 rounded-xl text-center w-fit py-2 hover:text-white bg-primary hover:bg-secondary/80"
+				/>
+			</div>
+		</div>
+	</div>
+</section>
+<!--Otros productos -->
+<section class="max-w-6xl  px-8  m-auto">
+	<div class="grid grid-cols-1 items-center gap-4 xl:gap-12 xl:grid-cols-3 xl:grid-cols-[25%,50%,15%]">
+		<div><h3 class="text-xs tracking-widest uppercase text-primary font-medium">Grupo Vértice</h3>
+			<p class="text-black mt-8 font-black text-3xl">Empresa orgullosamente mexicana.</p>
+		</div>
+		<div class="">
+			<p class="text-lg text-slate-400 max-w-2xl">OK CAR es un software de administración creado por Grupo Vértice. Tenemos soluciones flexibles y personalizadas según el tipo de actividad. </p>
+		</div>
+		<div class="grid h-full items-center justify-end">
+			<a href="https://www.gpovertice.com"
+			class="rounded-xl text-white bg-red-600 p-4 text-center inline-flex items-center justifycontent-center align-center hover:bg-blue-700 duration-200" target="_blank"
+				> Ir a la página </a>
+		</div>
+	</div>
+	
+</section>
+<!--Contact form -->
+<Contact></Contact>
+	</main>
+</Layout>
+
+<style>
+
+
+        #textList li {
+            display: none; /* Oculta todos los textos inicialmente */
+        }
+
+
+.animate-marquee {
+    animation: marquee 15s linear infinite;
+	transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/* SWITCH STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.switch-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  gap: 10px;
+  border: 1px solid #d1d5db;
+  border-radius:14px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+}
+
+.switch-wrapper [type="radio"] {
+  position: absolute;
+  left: -9999px;
+}
+
+.switch-wrapper [type="radio"]:checked#monthly ~ label[for="monthly"],
+.switch-wrapper [type="radio"]:checked#yearly ~ label[for="yearly"],
+.switch-wrapper [type="radio"]:checked#months ~ label[for="months"] {
+  color: #fff;
+}
+
+.switch-wrapper [type="radio"]:checked#monthly ~ label[for="monthly"] .switch-badge,
+.switch-wrapper [type="radio"]:checked#yearly ~ label[for="yearly"] .switch-badge,
+.switch-wrapper [type="radio"]:checked#months ~ label[for="months"] .switch-badge {
+  background: #fff;
+  color: #d30a0f;
+}
+
+.switch-wrapper [type="radio"]:checked#monthly ~ label[for="monthly"]:hover,
+.switch-wrapper [type="radio"]:checked#yearly ~ label[for="yearly"]:hover,
+.switch-wrapper [type="radio"]:checked#months ~ label[for="months"]:hover {
+  background: transparent;
+}
+
+.switch-wrapper [type="radio"]:checked#monthly ~ label[for="monthly"] ~ label[for="months"] ~ label[for="yearly"] ~ .highlighter {
+  transform: translateX(0%);
+}
+.switch-wrapper [type="radio"]:checked#months ~ label[for="monthly"] ~ label[for="months"] ~ label[for="yearly"] ~ .highlighter {
+  transform: translateX(101%);
+}
+.switch-wrapper [type="radio"]:checked#yearly ~ label[for="monthly"] ~ label[for="months"] ~ label[for="yearly"] ~ .highlighter {
+  transform: translateX(208%);
+}
+
+.switch-wrapper label {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 128px;
+  min-height: 56px;
+  padding: 10px 14px;
+  line-height: 1.1;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+}
+
+.switch-wrapper .switch-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  text-align: center;
+}
+
+.switch-wrapper .switch-title {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.switch-wrapper .switch-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: #fee2e2;
+  color: #b91c1c;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.switch-wrapper label:hover {
+  background: rgba(211, 10, 15, 0.08);
+}
+
+.switch-wrapper .highlighter {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: calc(33.33% - 8px);
+  height: calc(100% - 12px);
+  border-radius: 10px;
+  background: #d30a0f;
+  transition: transform 0.25s ease-in-out;
+  box-shadow: 0 8px 20px rgba(226, 9, 9, 0.25);
+}
+
+@media (max-width: 500px) {
+  .switch-wrapper {
+    width: 100%;
+    max-width: 340px;
+    padding: 4px;
+    gap: 6px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .switch-wrapper label {
+    min-width: 0;
+    min-height: 46px;
+    flex: 1;
+    padding: 8px 0px;
+  }
+
+  .switch-wrapper .switch-title {
+    font-size: 0.9rem;
+  }
+
+  .switch-wrapper .switch-badge {
+    padding: 1px 4px;
+    font-size: 0.65rem;
+  }
+
+  .switch-wrapper .highlighter {
+    top: 4px;
+    left: 4px;
+    width: calc(33.33% - 6px);
+    height: calc(100% - 8px);
+  }
+}
+.hide{
+	display:none;
+}
+@keyframes marquee{
+  0% {
+    transform: translate(0);
+}
+100% {
+    transform: translate(-55%);
+}
+}
+
+#brand-img{
+animation: 25s linear infinite marquee;	
+}
+#brand-img a{
+  display:grid;
+  align-items: center;
+  width: 140px;
+  
+}
+#brand-img a img{
+
+  object-fit: cover;
+  
+}
+
+#overlay-intro{
+	background:
+		linear-gradient(90deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.55) 35%, rgba(0,0,0,0.15) 65%, rgba(0,0,0,0) 100%),
+		linear-gradient(0deg, rgba(0,0,0,0.13) 0%, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 0.363) 92%, rgba(0,0,0,1) 100%);}
+.box-learn{
+	transition: transform .35s, box-shadow .35s;
+	transform: translate(0);
+	box-shadow: 0 20px 34px rgba(44, 11, 11, 0.04), 0 4px 8px rgba(44, 11, 11, 0.02), 0 10px 34px rgba(255, 52, 52, 0.05);
+    
+}
+.box-learn:hover{
+	transform: scale(.97);
+    box-shadow: 0 5px 18px rgba(44, 11, 11, 0.04), 0 1px 2px rgba(44, 11, 11, 0.02), 0 3px 15px rgba(255, 52, 52, 0.05);
+}
+
+.otros-productos {
+	transition: all .7s ease-in-out;
+	overflow:hidden;
+}
+
+
+.otros-productos:hover {
+	transform: translate3d(0px, 0px, 0px) scale3d(1.02, 1.02, 1.02) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+	
+
+	
+}
+
+#texto-producto{
+	opacity:0;
+	transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+	position:absolute;
+	width: 100%;
+	height:100%;
+	top:33%;
+
+}
+
+#overlay{
+	opacity:0;
+	transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+	position:absolute;
+	background:black;
+	width: 100%;
+	height: 100%;
+}
+.otros-productos:hover #texto-producto{
+opacity:1;
+
+	
+}
+.otros-productos:hover #overlay{
+	opacity: 0.8;
+}
+
+/*card*/
+
+
+/*video youtube*/
+.youtube-player {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #b60000;
+    margin: 5px;
+  }
+
+  .youtube-player iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: transparent;
+  }
+
+  .youtube-player img {
+    object-fit: cover;
+    display: block;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    height: auto;
+    cursor: pointer;
+    -webkit-transition: 0.4s all;
+    -moz-transition: 0.4s all;
+    transition: 0.4s all;
+  }
+
+  .youtube-player img:hover {
+    -webkit-filter: brightness(75%);
+  }
+
+  .youtube-player .play {
+    height: 48px;
+    width: 68px;
+    left: 50%;
+    top: 50%;
+    margin-left: -34px;
+    margin-top: -24px;
+    position: absolute;
+    cursor: pointer;
+  }
+
+ 
+
+
+/*card*/
+
+
+.cardWrap {
+  margin: 10px;
+  -webkit-transform: perspective(800px);
+  transform: perspective(800px);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  width: 100%;
+}
+
+.cardWrap:hover  {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.cardWrap:hover  {
+  opacity: 1;
+}
+
+.cardWrap:hover ,
+.cardWrap:hover  {
+  -webkit-transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.cardWrap:hover {
+  -webkit-transition: 5s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: 5s cubic-bezier(0.23, 1, 0.32, 1);
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.cardWrap:hover .card_Bg {
+  -webkit-transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+    opacity 5s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+    opacity 5s cubic-bezier(0.23, 1, 0.32, 1);
+  opacity: 0.8;
+}
+
+.cardWrap:hover .card_ {
+  -webkit-transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+    box-shadow 2s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+    box-shadow 2s cubic-bezier(0.23, 1, 0.32, 1);
+ 
+}
+
+.card_ {
+  position: relative;
+  -webkit-box-flex: 0;
+  margin:auto;
+  background-size: cover;
+  overflow: hidden;
+  
+  border-radius: 10px;
+margin:auto;	
+display:grid;
+place-content:center;
+  -webkit-transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.card_Bg {
+  opacity: 0.8;
+  position: absolute;
+  background-color:#000;
+
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  -webkit-transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+    opacity 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+    opacity 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  pointer-events: none;
+}
+
+</style>

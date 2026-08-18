@@ -1,0 +1,105 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Button from "../components/Button.astro";
+import { Image } from 'astro:assets';
+import { getImage } from 'astro:assets';
+import { getFormattedDate } from "../utils/all.js";
+import ImgBlog from '../assets/taller-mecanico-scaled.webp'
+const optimizedBackgroundBlog = await getImage({src: ImgBlog, format: 'webp'})
+
+const posts = (await Astro.glob("../pages/blog/*.md")).sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() -
+    new Date(a.frontmatter.publishDate).valueOf());
+console.log(posts[0].frontmatter.image);
+---
+<Layout title="Administra tu taller mécanico con OK CAR"
+description="Te enseñamos como administrar tu taller mécanico con nuestro software OK CAR y como logramos a ayudar empresas en la gestión de su taller mecánico"
+robots="index,follow"
+>
+<main >
+<section class=" min-h-screen relative ">
+
+  <div style={`background-image: url(${optimizedBackgroundBlog.src});`} class=" bg-cover py-44 relative">
+    <div id="overlay-intro" class="absolute z-0 w-full h-full   top-0"></div>
+    <div class="px-4 max-w-6xl m-auto relative text-white">
+      <h1 class="text-3xl lg:text-6xl text-center uppercase">			ADMINISTRAR SU 
+        <span class="text-primary">TALLER MECÁNICO</span>
+      </h1>
+      <p class="text-xl max-w-3xl m-auto text-center mt-6">En esta sección de blog, enseñamos como administrar tu taller con nuestro software OK CAR y como logramos a ayudar empresas en la gestión de su taller mecánico
+
+
+      </p>
+    </div>
+    
+  </div>
+   
+  
+  
+</section>
+  <section class="max-w-6xl px-4 relative m-auto">
+
+    <div class="grid gap-16 ">
+    {
+      posts.map((post) => (
+        <article  id="box" class="relative z-10 grid shadow-lg rounded-3xl md:grid-cols-2 items-center ">
+            <div>
+              <img class="rounded-t-3xl md:rounded-r-none md:rounded-l-3xl aspect-[16/10] h-full object-cover" src={post.frontmatter.image} />
+            </div>
+            <div class="py-4 px-6" >
+                  <h2 class="font-bold mt-4 text-2xl mb-4 text-black">
+                  <a href={`${post.url}`}> {post.frontmatter.title}</a>
+                </h2>
+                          <time
+                            class="text-gray-400"
+                            datetime={post.frontmatter.publishDate}>
+                            {getFormattedDate(post.frontmatter.publishDate)}
+                          </time>
+                <p class="mb-4 text-secondary/80" set:html={post.frontmatter.excerpt}/>
+                <a class="inline-flex text-primary font-bold my-2 justify-start items-center gap-2" href={`${post.url}`}>Leer el articulo
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                  </svg>
+                </a>
+              </div>
+        </article>
+      ))
+    }
+     
+    </div>
+  </section>
+  </main>
+</Layout>
+
+<style>
+  a,svg{
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+  
+#box{
+    transition:all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    box-shadow: 0 5px 18px rgba(44, 11, 11, 0.04), 0 1px 2px rgba(44, 11, 11, 0.02), 0 3px 15px rgba(255, 52, 52, 0.05);
+
+}
+
+
+
+
+#box:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 20px 34px rgba(44, 11, 11, 0.04), 0 4px 8px rgba(44, 11, 11, 0.02), 0 10px 34px rgba(255, 52, 52, 0.05);
+    
+    }
+
+a:hover{
+    transform: translateY(-1px);
+
+}
+
+
+a:hover svg{
+    transform: translateX(5px);
+}
+
+#overlay-intro{
+	background: linear-gradient(357deg, rgba(0,0,0,0.1293767507002801) 0%, rgba(0,0,0,0.6251750700280112) 35%, rgba(0,0,0,0.8352591036414566) 61%, rgba(0,0,0,1) 100%);}
+</style>

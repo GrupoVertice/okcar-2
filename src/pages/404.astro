@@ -1,1 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.astro";
 
+import { getImage } from 'astro:assets';
+import Img404 from '../assets/taller-mecanico1.webp'
+const optimizedBackground404 = await getImage({src: Img404, format: 'webp'})
+---
+
+<Layout
+title="Error 404 - Página no encontrada"
+description="Oopssss no encontramos la página que buscas!"
+robots="noindex,nofollow"
+>
+<div style={`background-image: url(${optimizedBackground404.src});`} class=" min-h-screen py-8 lg:pt-44 lg:pb-28  bg-cover py-44 relative">
+    <div id="overlay-intro" class="absolute z-0 w-full h-full   top-0"></div>
+
+    <div class="relative text-center grid items-center">
+        <h1  class="text-9xl text-primary font-bold mb-8">404</h1>
+        <h3 class="text-2xl mb-10 text-white font-bold">No se ha encontrado la página que busca.</h3>
+        <div class=" jutify-center">
+            <Button
+            name="Regresar al inicio"
+            href="/"
+            style="text-white font-medium duration-200 focus-visible:outline-black focus-visible:ring-black focus:outline-none items-center justify-center px-6 rounded-xl text-center inline-flex py-3 hover:text-white bg-primary  hover:bg-primary/80"
+
+
+            />
+        </div>
+    </div>
+   
+   
+  </div>
+
+  <style>
+    #overlay-intro{
+	background: linear-gradient(357deg, rgba(0,0,0,0.1293767507002801) 0%, rgba(0,0,0,0.6251750700280112) 25%, rgba(0,0,0,0.8352591036414566) 51%, rgba(0,0,0,1) 100%);}
+  </style>
+
+</Layout>
