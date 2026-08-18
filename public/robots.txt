@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /bienvenida/
+Disallow: /bienvenida
+Disallow: /*.pdf$
+
+Sitemap: https://okcar.mx/sitemap-index.xml
