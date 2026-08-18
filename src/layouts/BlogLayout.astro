@@ -1,0 +1,107 @@
+---
+import {getFormattedDate} from "../utils/all";
+import Layout from "../layouts/Layout.astro";
+import { Image } from 'astro:assets';
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title} description={frontmatter.excerpt} robots="index,follow"
+>
+  <main class="">
+    <div id="" class="bg-black   pt-36 pb-20 md:py-44 relative">
+      <img 
+      class="absolute  w-full opacity-10 h-full top-0 object-cover mb-8 "
+       src={frontmatter.image} 
+       alt=""
+       width=1920
+       loading="lazy"
+       height=1080
+       sizes="(max-width: 800px) 100vw, 800px"
+       alt="Thumbnail"
+       >
+      <h1 class="text-3xl text-center md:text-4xl lg:text-6xl font-bold mb-2 text-primary max-w-3xl mx-auto">{frontmatter.h1}</h1>
+      <div class="grid justify-center text-center w-full mt-8 text-xl md:inline-flex gap-4 text-white">
+        <i>Escrito por {frontmatter.author} </i>
+        <time class="text-gray-400" datetime={frontmatter.publishDate}>
+          {getFormattedDate(frontmatter.publishDate)}
+        </time>  
+      </div>
+  
+    </div>
+
+
+    <div id="content" class="mx-auto max-w-[735px] py-32 grid gap-2 px-6 text-justify mt-6">
+      <slot class="text-lg"/>
+      <div class="text-center mt-8">
+        <a
+          href="/blog"
+   class=" bg-red-600 text-white font-medium inline-flex items-center rounded-xl border-solid border-red-500 h-12 px-10 mt-10"        >Regresar al blog</a
+        >
+      </div>
+    </div>
+    
+  </main>
+</Layout>
+
+<style is:global>
+  #content p{
+    padding:15px 0;
+   
+  }
+
+  #content h2{
+    font-family: 'Metropolis Regular';
+    font-size:1.6rem;
+    margin:1.25rem 0 0.75rem;
+    font-weight:700;
+    color:#111827;
+    scroll-margin-top:120px;
+  }
+
+  #content h3{
+    font-family: 'Metropolis Regular';
+    font-size:1.25rem;
+    margin:1rem 0 0.5rem;
+    font-weight:600;
+    color:#374151;
+    scroll-margin-top:120px;
+  }
+
+  /* Apply red link color only to inline text links inside paragraphs, lists, tables */
+  #content p a,
+  #content li a,
+  #content td a{
+    color:#ff0000;
+    text-decoration:underline;
+    text-underline-offset:3px;
+    font-weight:600;
+  }
+
+  #content a:hover{
+    opacity:0.9;
+    text-decoration:none;
+  }
+
+    /* Preserve button/link contrast when using utility classes */
+    #content a.bg-primary,
+    #content a.text-white{
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    #content a.bg-primary:hover{
+      opacity: 0.95;
+    }
+
+  #menu-desktop li a{
+    color:black;
+  }
+
+  #logo{
+    filter:brightness(0);
+  }
+
+  #btn svg{
+    stroke:black!important;
+  }
+</style>

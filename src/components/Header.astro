@@ -1,0 +1,344 @@
+---
+import Button from "./Button.astro";
+import { Image } from 'astro:assets';
+
+import LogoHeader from "../assets/logo.webp"
+---
+<script src="../scripts/app.js">
+  
+</script>
+<nav id="navbar" class="navbar_ fixed  w-full px-4 sm:px-6 lg:px-8   z-50	 flex items-center lg:justify-between ">
+        <div class="lg:px-10 xl:px-24 mx-auto px-4 w-full z-10 flex justify-between items-center  lg:gap-14 ">
+            <div class="inline-flex gap-8 items-center">
+                <a id="logo-change" aria-label="regresar al inicio" href="/"><Image id="logo" class="logo z-10 relative aspect-video object-contain " src={LogoHeader} width={140}  alt="logo ok car"/></a>
+                <ul id="menu-desktop" class="hidden relative lg:flex lg:gap-6 font-medium ">
+
+                    <li class="group relative">
+                        <a href="/#servicios" class="relative -mx-3 -my-2 inline-flex items-center gap-1 rounded-lg px-3 py-2 transition-colors delay-150 hover:text-primary hover:delay-[0ms]">
+                            Funciones
+                            <svg class="h-3.5 w-3.5 transition-transform duration-200 group-hover:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </a>
+
+                        <div class="invisible absolute left-64 top-full z-40 mt-3 w-[min(680px,88vw)] -translate-x-1/2 translate-y-2 rounded-2xl border border-white/40 bg-white/70 p-7 opacity-0 shadow-2xl shadow-secondary/20 backdrop-blur-xl backdrop-saturate-150 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                            <div class="grid grid-cols-4 gap-8">
+                                <div>
+                                    <h4 class="mb-3 text-xs font-bold uppercase tracking-wide text-secondary/80">Operativo</h4>
+                                    <ul class="grid gap-2 text-sm text-secondary">
+                                        <li><a href="#" class="-mx-2 block rounded-md px-2 py-1 transition-colors hover:bg-primary/10 hover:text-primary">Recepción y Checklist</a></li>
+                                        <li><a href="#" class="-mx-2 block rounded-md px-2 py-1 transition-colors hover:bg-primary/10 hover:text-primary">Orden de Servicio</a></li>
+                                        <li><a href="#" class="-mx-2 block rounded-md px-2 py-1 transition-colors hover:bg-primary/10 hover:text-primary">Historiales</a></li>
+                                        <li><a href="#" class="-mx-2 block rounded-md px-2 py-1 transition-colors hover:bg-primary/10 hover:text-primary">Citas</a></li>
+                                        <li><a href="#" class="-mx-2 block rounded-md px-2 py-1 transition-colors hover:bg-primary/10 hover:text-primary">Operadores</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="mb-3 text-xs font-bold uppercase tracking-wide text-secondary/80">Administrativo</h4>
+                                    <ul class="grid gap-2 text-sm text-secondary">
+                                        <li><a href="#" class="-mx-2 block rounded-md px-2 py-1 transition-colors hover:bg-primary/10 hover:text-primary">Facturación</a></li>
+                                        <li><a href="#" class="-mx-2 block rounded-md px-2 py-1 transition-colors hover:bg-primary/10 hover:text-primary">Ingresos</a></li>
+                                        <li><a href="#" class="-mx-2 block rounded-md px-2 py-1 transition-colors hover:bg-primary/10 hover:text-primary">Dashboard</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="mb-3 text-xs font-bold uppercase tracking-wide text-secondary/80">Inventario</h4>
+                                    <ul class="grid gap-2 text-sm text-secondary">
+                                        <li><a href="#" class="-mx-2 block rounded-md px-2 py-1 transition-colors hover:bg-primary/10 hover:text-primary">Inventario</a></li>
+                                        <li><a href="#" class="-mx-2 block rounded-md px-2 py-1 transition-colors hover:bg-primary/10 hover:text-primary">Proveedores</a></li>
+                                        <li><a href="#" class="-mx-2 block rounded-md px-2 py-1 transition-colors hover:bg-primary/10 hover:text-primary">Requisiciones</a></li>
+                                        <li><a href="#" class="-mx-2 block rounded-md px-2 py-1 transition-colors hover:bg-primary/10 hover:text-primary">Egresos</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="mb-3 text-xs font-bold uppercase tracking-wide text-secondary/80">Posventa</h4>
+                                    <ul class="grid gap-2 text-sm text-secondary">
+                                        <li><a href="#" class="-mx-2 block rounded-md px-2 py-1 transition-colors hover:bg-primary/10 hover:text-primary">App Móvil</a></li>
+                                        <li><a href="#" class="-mx-2 block rounded-md px-2 py-1 transition-colors hover:bg-primary/10 hover:text-primary">Proyección de Servicio</a></li>
+                                        <li><a href="#" class="-mx-2 block rounded-md px-2 py-1 transition-colors hover:bg-primary/10 hover:text-primary">Encuestas</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li><a href="/#precios" class="relative -mx-3 -my-2 rounded-lg px-3 py-2 transition-colors delay-150 hover:text-primary hover:delay-[0ms]" href="">Precios </a></li>
+
+                    <li class="group relative">
+                        <a href="/#capacitacion" class="relative -mx-3 -my-2 inline-flex items-center gap-1 rounded-lg px-3 py-2 transition-colors delay-150 hover:text-primary hover:delay-[0ms]">
+                            Sectores
+                            <svg class="h-3.5 w-3.5 transition-transform duration-200 group-hover:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </a>
+
+                        <div class="invisible absolute left-0 top-full z-40 mt-3 min-w-[220px] translate-y-2 rounded-2xl border border-white/40 bg-white/70 p-3 opacity-0 shadow-2xl shadow-secondary/20 backdrop-blur-xl backdrop-saturate-150 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                            <ul class="grid gap-1 text-sm text-secondary">
+                                <li><a href="#" class="block rounded-lg px-3 py-2 transition-colors hover:bg-primary/10 hover:text-primary">Taller mecánico</a></li>
+                                <li><a href="#" class="block rounded-lg px-3 py-2 transition-colors hover:bg-primary/10 hover:text-primary">Taller de motos</a></li>
+                                <li><a href="#" class="block rounded-lg px-3 py-2 transition-colors hover:bg-primary/10 hover:text-primary">Flotillas</a></li>
+                                <li><a href="#" class="block rounded-lg px-3 py-2 transition-colors hover:bg-primary/10 hover:text-primary">Llanteras</a></li>
+                                <li><a href="#" class="block rounded-lg px-3 py-2 transition-colors hover:bg-primary/10 hover:text-primary">Autolavados</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="group relative">
+                        <a href="/#clientes" class="relative -mx-3 -my-2 inline-flex items-center gap-1 rounded-lg px-3 py-2 transition-colors delay-150 hover:text-primary hover:delay-[0ms]">
+                            Clientes
+                            <svg class="h-3.5 w-3.5 transition-transform duration-200 group-hover:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </a>
+
+                        <div class="invisible absolute left-0 top-full z-40 mt-3 min-w-[200px] translate-y-2 rounded-2xl border border-white/40 bg-white/70 p-3 opacity-0 shadow-2xl shadow-secondary/20 backdrop-blur-xl backdrop-saturate-150 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                            <ul class="grid gap-1 text-sm text-secondary">
+                                <li><a href="#" class="block rounded-lg px-3 py-2 transition-colors hover:bg-primary/10 hover:text-primary">Reseñas</a></li>
+                                <li><a href="#" class="block rounded-lg px-3 py-2 transition-colors hover:bg-primary/10 hover:text-primary">Casos de Éxito</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li><a href="/blog" class="relative -mx-3 -my-2 rounded-lg px-3 py-2 transition-colors delay-150 hover:text-primary hover:delay-[0ms]" href="">Blog</a></li>
+
+                </ul>
+            </div>
+
+            <div class="grid justify-end lg:hidden">
+                <button class="relative z-10 -m-2 inline-flex items-center rounded-lg stroke-gray-900 p-2 hover:bg-gray-200/50 hover:stroke-gray-600 active:stroke-gray-900 [&:not(:focus-visible)]:focus:outline-none" id="btn" aria-label="menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0f142a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                </button>
+                <div class="fixed inset-0  bg-gray-300/60 backdrop-blur " id="pop-up-overlay" aria-hidden="true" data-headlessui-state="open" ></div>
+                <div class="dropdown_  grid gap-4 rounded-b-2xl  px-6 pb-6 pt-32 shadow-2xl shadow-gray-900/20" id="dropdown">
+                    <a href="/" class="block text-base leading-7 tracking-tight font-medium text-secondary" >Inicio</a>
+
+                    <div class="border-b border-secondary/10 pb-4">
+                        <div class="flex items-center justify-between">
+                            <a href="/#servicios" class="block text-base leading-7 tracking-tight font-medium text-secondary">Funciones</a>
+                            <button type="button" class="-m-2 p-2 text-secondary" data-accordion-trigger aria-expanded="false" aria-controls="acc-funciones" aria-label="Mostrar opciones de Funciones">
+                                <svg class="h-4 w-4 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                            </button>
+                        </div>
+                        <div id="acc-funciones" class="grid max-h-0 overflow-hidden opacity-0 transition-all duration-300" data-accordion-panel>
+                            <div class="grid gap-4 pt-4 pl-2">
+                                <div>
+                                    <h4 class="mb-2 text-xs font-bold uppercase tracking-wide text-secondary/50">Operativo</h4>
+                                    <div class="grid gap-2">
+                                        <a href="#" class="block text-sm text-secondary/80">Recepción y Checklist</a>
+                                        <a href="#" class="block text-sm text-secondary/80">Orden de Servicio</a>
+                                        <a href="#" class="block text-sm text-secondary/80">Historiales</a>
+                                        <a href="#" class="block text-sm text-secondary/80">Citas</a>
+                                        <a href="#" class="block text-sm text-secondary/80">Operadores</a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="mb-2 text-xs font-bold uppercase tracking-wide text-secondary/50">Administrativo</h4>
+                                    <div class="grid gap-2">
+                                        <a href="#" class="block text-sm text-secondary/80">Facturación</a>
+                                        <a href="#" class="block text-sm text-secondary/80">Ingresos</a>
+                                        <a href="#" class="block text-sm text-secondary/80">Dashboard</a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="mb-2 text-xs font-bold uppercase tracking-wide text-secondary/50">Inventario</h4>
+                                    <div class="grid gap-2">
+                                        <a href="#" class="block text-sm text-secondary/80">Inventario</a>
+                                        <a href="#" class="block text-sm text-secondary/80">Proveedores</a>
+                                        <a href="#" class="block text-sm text-secondary/80">Requisiciones</a>
+                                        <a href="#" class="block text-sm text-secondary/80">Egresos</a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="mb-2 text-xs font-bold uppercase tracking-wide text-secondary/50">Posventa</h4>
+                                    <div class="grid gap-2">
+                                        <a href="#" class="block text-sm text-secondary/80">App Móvil</a>
+                                        <a href="#" class="block text-sm text-secondary/80">Proyección de Servicio</a>
+                                        <a href="#" class="block text-sm text-secondary/80">Encuestas</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="/#precios" class="block text-base leading-7 tracking-tight font-medium text-secondary">Precios </a>
+
+                    <div class="border-b border-secondary/10 pb-4">
+                        <div class="flex items-center justify-between">
+                            <a href="/#capacitacion" class="block text-base leading-7 tracking-tight font-medium text-secondary">Sectores</a>
+                            <button type="button" class="-m-2 p-2 text-secondary" data-accordion-trigger aria-expanded="false" aria-controls="acc-sectores" aria-label="Mostrar opciones de Sectores">
+                                <svg class="h-4 w-4 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                            </button>
+                        </div>
+                        <div id="acc-sectores" class="grid max-h-0 overflow-hidden opacity-0 transition-all duration-300" data-accordion-panel>
+                            <div class="grid gap-2 pt-4 pl-2">
+                                <a href="#" class="block text-sm text-secondary/80">Taller mecánico</a>
+                                <a href="#" class="block text-sm text-secondary/80">Taller de motos</a>
+                                <a href="#" class="block text-sm text-secondary/80">Flotillas</a>
+                                <a href="#" class="block text-sm text-secondary/80">Llanteras</a>
+                                <a href="#" class="block text-sm text-secondary/80">Autolavados</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-b border-secondary/10 pb-4">
+                        <div class="flex items-center justify-between">
+                            <a href="/#clientes" class="block text-base leading-7 tracking-tight font-medium text-secondary">Clientes</a>
+                            <button type="button" class="-m-2 p-2 text-secondary" data-accordion-trigger aria-expanded="false" aria-controls="acc-clientes" aria-label="Mostrar opciones de Clientes">
+                                <svg class="h-4 w-4 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                            </button>
+                        </div>
+                        <div id="acc-clientes" class="grid max-h-0 overflow-hidden opacity-0 transition-all duration-300" data-accordion-panel>
+                            <div class="grid gap-2 pt-4 pl-2">
+                                <a href="#" class="block text-sm text-secondary/80">Reseñas</a>
+                                <a href="#" class="block text-sm text-secondary/80">Casos de Éxito</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a  href="/blog" class="block text-base leading-7 tracking-tight font-medium text-secondary" >Blog</a>
+                    <Button
+                    href="https://portal.gpovertice.com/login.aspx?ReturnUrl=%2f"
+                    name="Acceso cliente"
+                    style="text-white font-medium duration-200 focus-visible:outline-black focus-visible:ring-black focus:outline-none items-center justify-center px-6 rounded-xl text-center inline-flex py-3 hover:text-white bg-secondary  hover:bg-secondary/80"
+                    />
+                    <Button
+                    href="/#contact"
+                    name="Pruébalo"
+                    style="text-white font-medium duration-200 focus-visible:outline-black focus-visible:ring-black focus:outline-none items-center justify-center px-6 rounded-xl text-center inline-flex py-3 hover:text-white bg-gradient-to-r from-primary to-lighter hover:bg-secondary/80"
+                    />
+                </div>
+              </div>
+              <div class="hidden lg:inline-flex gap-4 items-center">
+                <a  href="https://portal.gpovertice.com/login.aspx?ReturnUrl=%2f" target="_blank" class="hidden underline lg:block text-primary relative -mx-3 -my-2 rounded-lg px-3 py-2 transition-colors delay-150 hover:text-primary hover:delay-[0ms]" href="">Acceso Cliente</a>
+              
+                <Button
+                href="/#contact"
+                name="Pruébalo"
+                style="hidden lg:block text-white font-bold duration-200 focus-visible:outline-black focus-visible:ring-black focus:outline-none items-center justify-center px-6 rounded-xl text-center inline-flex py-3 hover:text-white bg-gradient-to-r from-primary to-lighter hover:bg-secondary/80"
+                />
+              </div>
+           
+        </div>
+      
+          
+    
+  
+</nav>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('[data-accordion-trigger]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const panelId = btn.getAttribute('aria-controls');
+        const panel = panelId ? document.getElementById(panelId) : null;
+        if (!panel) return;
+
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!isOpen));
+        btn.querySelector('svg')?.classList.toggle('rotate-180');
+
+        if (isOpen) {
+          panel.style.maxHeight = '0px';
+          panel.style.opacity = '0';
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + 'px';
+          panel.style.opacity = '1';
+        }
+      });
+    });
+  });
+</script>
+
+<style >
+
+
+#menu-desktop{
+color:#fff;
+}
+.scrolled #menu-desktop{
+color:#000;
+}
+#btn svg{
+  stroke:white;
+}
+.scrolled #btn svg{
+  stroke:black;
+}
+
+.bx {
+  font-size: 1.1rem;
+}
+
+.dropdown_ {
+  position: absolute;
+background-color: #ec3f3f77;
+  margin-top: 0.3rem;
+  background: white;
+   top:0; 
+  left:0;
+  right:0;
+  z-index:0;
+  transform-origin: top;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.1s cubic-bezier(0.16, 1, 0.5, 1);
+}
+
+#submenu {
+	left:17.5%;
+	opacity: 0;
+	position: absolute;
+	top: 35px;
+	visibility: hidden;
+	z-index: 1;
+}
+li:hover ul#submenu, li:focus ul#submenu {
+	opacity: 1;
+	top: 40px;	/* adjust this as per top nav padding top & bottom comes */
+	visibility: visible;
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+}
+.show svg{
+  stroke: black!important;
+}
+
+.show img{
+  filter:invert(0)!important;
+}
+.arrow {
+  transform: rotate(180deg);
+  transition: 0.2s ease;
+}
+
+#pop-up-overlay{
+    visibility:hidden;
+     opacity:0;
+}
+
+@media only screen and (min-width: 1100px) {
+
+.scrolled.navbar_{
+  transition: 0.5s ease;
+  padding-top:12px;
+  padding-bottom:12px;
+}
+.logo{
+  width:180px;
+}
+
+.scrolled.navbar_ .logo {
+
+width: 150px;
+transition: 0.5s ease;
+}
+
+}
+
+.scrolled.navbar_{
+  background-color:rgb(255, 255, 255);
+  transition: 0.5s ease;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+
+
+
+
+</style>

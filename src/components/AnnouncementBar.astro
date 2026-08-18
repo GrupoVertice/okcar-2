@@ -1,0 +1,39 @@
+---
+import Facture from "./icons/Facture.astro";
+const message = "Ya contamos con versión 4.0 CFDI";
+
+---
+
+
+
+<div class="relative z-0  ">
+  <div id="marquee" class=" text-white">
+      <div class="mx-auto overflow-hidden overflow-x-hidden py-4 relative bg-primary">
+         
+          <div class="items-center inline-flex animate-marquee font-black font-display gap-4 text-base relative tracking-widest uppercase whitespace-nowrap">{message} <Facture/> {message} <Facture/> {message} <Facture/> {message} <Facture/> {message} <Facture/> {message} <Facture/> {message} <Facture/> {message} <Facture/> {message} <Facture/> {message} <Facture/> {message} <Facture/> {message}  </div>
+      </div>
+  </div>
+</div>
+
+
+
+<style>
+ 
+ .animate-marquee {
+    animation: marquee 70s linear infinite;
+}
+
+#marquee img {
+}
+
+@keyframes marquee{
+  0% {
+    transform: translate(0);
+}
+100% {
+    transform: translate(-100%);
+}
+}
+
+</style>
+</div>

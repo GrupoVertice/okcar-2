@@ -1,0 +1,231 @@
+---
+import { getImage } from "astro:assets";
+import { Image } from 'astro:assets';
+ 
+import ImgService1 from '../assets/foto-os (1).jpg'
+import ImgService2 from '../assets/pro-de-servicios.webp'
+import ImgService3 from '../assets/SERVICIOS_Dashboard.webp'
+import ImgService4 from '../assets/integras.jpg'
+import ImgService5 from '../assets/facturas.jpg'
+import ImgService6 from '../assets/mecanicos.jpg'
+import ImgService7 from '../assets/apps.jpg'
+ 
+const optimizedImgService1 = await getImage({src: ImgService1, format: 'webp'})
+const optimizedImgService2 = await getImage({src: ImgService2, format: 'webp'})
+const optimizedImgService3 = await getImage({src: ImgService3, format: 'webp'})
+const optimizedImgService4 = await getImage({src: ImgService4, format: 'webp'})
+const optimizedImgService5 = await getImage({src: ImgService5, format: 'webp'})
+const optimizedImgService6 = await getImage({src: ImgService6, format: 'webp'})
+const optimizedImgService7 = await getImage({src: ImgService7, format: 'webp'})
+
+const cards = [
+  {
+    title: "¡¡Crece tus ventas, crea transparencia y evita malentendidos!!",
+    description: "Califica el Check List y deja evidencias fotográficas del antes y después de una reparación, además podrás colocar fotografías de la recepción del vehículo para dejar evidencias de algún desperfecto.",
+    img: optimizedImgService1.src,
+    svg: `<svg class="text-white bg-primary rounded-xl p-3 h-12 w-12 flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>`
+  },
+  {
+    title: "¡¡Rápido, transparente y sin complicaciones!!",
+    description: "Envía automáticamente a tu cliente el avance de su auto vía WhatsApp, el cual está integrado en tu sistema OK CAR. Así lograrás mayor comunicación, confianza y evitar malos entendidos.",
+    img: optimizedImgService6.src,
+    svg: `<svg class="text-white bg-primary rounded-xl p-3 h-12 w-12 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>`
+  },
+  {
+    title: "¡¡Aumenta tus ventas!!",
+    description: "OK CAR enviará automáticamente una alerta vía email y aplicación móvil a tus clientes avisando de sus próximos servicios 30 días antes de expirar.",
+    img: optimizedImgService2.src,
+    svg: `<svg class="text-white bg-primary rounded-xl p-3 h-12 w-12 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>`
+  },
+  {
+    title: "¡¡Más servicios = Más ventas!! ",
+    description: "Otorga a tus clientes un monedero electrónico ligado en tu sistema OK CAR, y por cada compra que el cliente haga en tu taller(s) ofrece un % de esa compra a su monedero para utilizar en el futuro en tu taller(s). Crece tus ventas y lealtad de tu cliente.",
+    img: optimizedImgService3.src,
+    svg: `<svg class="text-white bg-primary rounded-xl p-3 h-12 w-12 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>`
+  },
+  {
+    title: "¡¡No dejes dinero sobre la mesa!!",
+    description: "Cuando un cliente no autorice algún servicio por falta de tiempo o dinero, OK CAR llevará un registro automático de esos servicios “no autorizados” para que posteriormente le mandes desde tu mismo sistema OK CAR un Email/WhatsApp invitándolo a generar ese servicio que quedó pendiente, incluso agregar alguna imagen de promoción.",
+    img: optimizedImgService5.src,
+    svg: `<svg class="text-white bg-primary rounded-xl p-3 h-12 w-12 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg>`
+  },
+
+]
+---
+<div id="cards-stack" class="w-full max-w-6xl mx-auto px-4 py-4">
+  {cards.map((card, i) => (
+    <div class="card-slot" data-index={i}>
+      <div class="card-inner group">
+        <!-- Image -->
+        <div class="card-image-wrap">
+          <img src={card.img} alt={card.section} class="card-image" />
+        </div>
+        <!-- Content -->
+        <div class="card-content">
+          <div class="flex gap-3 items-start">
+            <Fragment set:html={card.svg} />
+            <h4 class="text-xl font-bold text-[#002149] group-hover:text-primary transition-colors duration-300 leading-snug">
+              {card.title}
+            </h4>
+          </div>
+          <p class="mt-4 text-[#16263a] text-base leading-relaxed text-left">
+            {card.description}
+          </p>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+ 
+<script>
+(function () {
+  const TOP_OFFSET = 160; // navbar height + spacing
+  const STACK_GAP  = 0;   // px each successive card is offset lower
+ 
+  function init() {
+    const stack = document.getElementById('cards-stack');
+    if (!stack) return;
+ 
+    const slots  = Array.from(stack.querySelectorAll('.card-slot'));
+    const inners = slots.map(s => s.querySelector('.card-inner'));
+ 
+    // Step 1: Temporarily reset all slots to auto height so the inner cards
+    // can render at their natural size (important on mobile where cards are
+    // taller due to flex-direction:column).
+    slots.forEach(slot => {
+      slot.style.height = 'auto';
+      slot.style.marginBottom = '2.5rem';
+    });
+ 
+    // Step 2: Measure each card's real rendered height and lock the slot to
+    // that exact value. This is the scroll "room" the card occupies.
+    function syncSlotHeights() {
+      // Reset to auto first so we get the true natural height
+      inners.forEach(inner => {
+        inner.style.position = '';
+        inner.style.width    = '';
+        inner.style.top      = '';
+        inner.style.left     = '';
+      });
+      slots.forEach((slot, i) => {
+        const h = inners[i].getBoundingClientRect().height;
+        slot.style.height = h + 'px';
+      });
+    }
+ 
+    syncSlotHeights();
+ 
+    function update() {
+      const stackRect = stack.getBoundingClientRect();
+ 
+      slots.forEach((slot, i) => {
+        const inner     = inners[i];
+        const cardH     = slot.getBoundingClientRect().height; // locked height
+        const stickyTop = TOP_OFFSET + i * STACK_GAP;
+        const slotRect  = slot.getBoundingClientRect();
+        const naturalTop = slotRect.top;
+ 
+        if (naturalTop <= stickyTop && stackRect.bottom > stickyTop + cardH) {
+          // PIN
+          inner.style.position = 'fixed';
+          inner.style.top      = stickyTop + 'px';
+          inner.style.left     = slotRect.left + 'px';
+          inner.style.width    = slotRect.width + 'px';
+          inner.style.zIndex   = String(10 + i);
+        } else {
+          // FLOW
+          inner.style.position = 'relative';
+          inner.style.top      = '';
+          inner.style.left     = '';
+          inner.style.width    = '';
+          inner.style.zIndex   = String(10 + i);
+        }
+      });
+    }
+ 
+    // On resize: re-measure heights then re-run pinning logic
+    window.addEventListener('resize', () => {
+      syncSlotHeights();
+      update();
+    }, { passive: true });
+ 
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+  }
+ 
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+ 
+<style>
+  /* Each slot is a block placeholder — gives the page its scroll height */
+  .card-slot {
+    position: relative;
+  }
+ 
+  /* The visual card — starts relative, becomes fixed via JS when pinned */
+  .card-inner {
+    display: flex;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 0 15px #e7e7e7;
+    will-change: transform;
+    height: 18rem;
+    /* width/top/left/position set by JS when pinned */
+  }
+  .card-image-wrap {
+    position: relative;
+    width: 35%;
+    flex-shrink: 0;
+  }
+ 
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+ 
+  .card-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgb(0, 0, 0), transparent);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 1rem 0.75rem 0.5rem;
+  }
+ 
+  .card-content {
+    padding: 2rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+  }
+ 
+  /* Mobile: simpler stacking, no fixed positioning needed */
+  @media (max-width: 640px) {
+    .card-inner {
+      flex-direction: column;
+      height: auto;
+    }
+ 
+    .card-image-wrap {
+      width: 100%;
+      height: 12rem;
+    }
+ 
+    .card-content {
+      padding: 1.25rem;
+    }
+  }
+</style>

@@ -1,0 +1,32 @@
+---
+import { Image } from 'astro:assets';
+
+import LogoFooter from "../assets/logo.webp"
+---
+
+<footer class="footer p-10 max-w-6x1 m-auto text-black">
+    <div>
+        <Image class="w-52 mb-6 aspect-[16/4] object-contain" src={LogoFooter} alt="logo ok car"/>
+        <p class="text-base md:max-w-[350px]">Copyright © OK CAR 2024 Todos los derechos reservados – Grupo Vértice BERNARDINO JARAMILLO JANTE</p>
+        <p class="text-m"><a target="_blank" href="https://www.comparasoftware.com/ok-car"> OK CAR </a> se encuentra verificado como <a href="https://www.comparasoftware.com/taller-mecanico"> Software para Taller Mecánico</a> en Mexico</p>
+    </div> 
+    <div>
+      <span class="footer-title text-primary opacity-100">OK CAR</span> 
+      <a href="/#servicios" class="link link-hover">Servicios</a> 
+      <a href="/#capacitacion" class="link link-hover">Capacitación </a> 
+      <a href="/#clientes" class="link link-hover">Casos de éxito </a> 
+      <a href="/blog" class="link link-hover">Blog</a>
+    </div> 
+    <div>
+      <span class="footer-title text-primary opacity-100">Grupo Vertice</span> 
+      <a href="http://gpovertice.com/" target="_blank" class="link link-hover">Grupo Vértice</a> 
+      <a href="https://www.gradoescolar.com/" target="_blank" class="link link-hover">Grado Escolar</a> 
+    </div> 
+    <div>
+      <span class="footer-title text-primary opacity-100">Otros</span> 
+      <a href="/aviso-de-privacidad" class="link link-hover">Aviso de Privacidad</a> 
+      <a href="https://portal.gpovertice.com/login.aspx?ReturnUrl=%2f" target="_blank" class="link link-hover">Acceso Cliente</a> 
+      <a href="/#contact" class="link link-hover">Contacto</a>
+    </div>
+
+  </footer>

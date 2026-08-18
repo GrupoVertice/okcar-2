@@ -1,0 +1,78 @@
+---
+import {getFormattedDate} from "../utils/all";
+import Layout from "../layouts/Layout.astro";
+import { Image } from 'astro:assets';
+const { frontmatter } = Astro.props;
+---
+<head >
+  <title>{frontmatter.title}</title>
+  <meta name="description" content={frontmatter.excerpt} />
+  <meta name="robots" content="index,follow" />
+  <meta charset="UTF-8">
+</head>
+
+ <main class="">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js"></script>
+
+    <div id="" class="bg-gradient-to-b from-slate-950 to-slate-800 pl-12 md:pl-20 lg:pl-[20%] pr-32 py-12 relative overflow-hidden">
+       <img
+         class="absolute bottom-0 right-1 lg:right-[20%] h-[85%] object-contain opacity-100 z-0 max-[300px]:hidden"
+         src={frontmatter.image}
+         alt="Thumbnail"
+         loading="lazy"
+         height="1080"
+         sizes="(max-width: 800px) 100vw, 800px"
+       />
+      <h1 class="text-3xl text-left md:text-6xl font-bold mb-2 text-stone-300 mx-auto z-10 relative">{frontmatter.h1}</h1>
+      <div class="grid text-left w-full text-xl lg:text-3xl md:inline-flex gap-4 text-amber-300 z-3 relative">
+        <i>{frontmatter.modulo} </i> 
+      </div>
+  
+    </div>
+
+
+    <div id="content" class="mx-auto max-w-[735px] py-6 grid gap-2 px-12 text-justify mt-6">
+
+      <!-- <div class="flex mb-6">
+        <div class="bg-white rounded-xl shadow-lg p-2 lg:p-4 hover:scale-95 hover:shadow-sm duration-300 relative">
+         <img
+           class="h-full object-contain opacity-100 z-0"
+          src={frontmatter.image}
+          alt="Thumbnail"
+           loading="lazy"
+           height="1080"
+           sizes="(max-width: 800px) 100vw, 800px"
+         />  
+        </div>  
+          <h1 class="text-xl text-left md:text-4xl font-bold text-stone-800 z-10 relative">{frontmatter.h1}</h1>
+      </div> -->
+      
+      <slot class="text-2xl"/>
+
+      <lite-youtube videoid={frontmatter.link} class="w-full aspect-video rounded-xl shadow-2xl mt-8"></lite-youtube>
+
+
+    </div>
+    
+  </main>
+</Layout>
+
+<style >
+  #content p{
+    padding:15px 0;
+  }
+
+  #menu-desktop li a{
+    color:black;
+  }
+
+  #logo{
+    filter:brightness(0);
+  }
+
+  #btn svg{
+    stroke:black!important;
+  }
+</style> 
+
+

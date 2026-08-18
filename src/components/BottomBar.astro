@@ -1,0 +1,58 @@
+<!-- <script >
+
+
+    let scrollPos = 0;
+    const nav = document.querySelector('#btn-nav');
+
+    function checkPosition() {
+      let windowY = window.scrollY;
+      if (windowY < scrollPos) {
+        // Scrolling UP
+        nav.classList.add('is-visible');
+        nav.classList.remove('is-hidden');
+      } else {
+        // Scrolling DOWN
+        nav.classList.add('is-hidden');
+        nav.classList.remove('is-visible');
+      }
+      scrollPos = windowY;
+    }
+
+    // window.addEventListener('scroll', checkPosition);
+    window.addEventListener('scroll', checkPosition);
+</script> -->
+
+<div id="btn-nav" class="btm-nav bg-white shadow-lg z-20 text-primary md:hidden lg:hidden">
+    <a href="tel:+524421147923" class=" min-h-16" aria-label="llamar">
+        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-Phone"><path d="M10.554 6.24L7.171 2.335c-.39-.45-1.105-.448-1.558.006L2.831 5.128c-.828.829-1.065 2.06-.586 3.047a29.207 29.207 0 0 0 13.561 13.58c.986.479 2.216.242 3.044-.587l2.808-2.813c.455-.455.456-1.174.002-1.564l-3.92-3.365c-.41-.352-1.047-.306-1.458.106l-1.364 1.366a.462.462 0 0 1-.553.088 14.557 14.557 0 0 1-5.36-5.367.463.463 0 0 1 .088-.554l1.36-1.361c.412-.414.457-1.054.101-1.465z"/></svg>
+                <span class="btm-nav-label text-secondary text-xs">Llamar</span>
+    </a>
+    <a href="/#contact" class="active min-h-16" aria-label="contactarnos por mail">
+        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-Envelope"><path d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6z"/><path d="M2 8l7.501 6.001a4 4 0 0 0 4.998 0L22 8"/></svg>
+                <span class="btm-nav-label text-secondary text-xs">Mail</span>
+    </a>
+   
+    <a href="https://wa.me/524421147923?text=Mi%20nombre%20es:____%20Mi%20taller%20se%20llama:___:.%20Me%20interesa%20su%20sistema.%20" class="min-h-16" aria-label="Whatsapp">
+        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="currentColor" stroke-width="2" class="ai ai-WhatsappFill"><g clip-path="url(#clip0_615_275)"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.415 14.382c-.298-.149-1.759-.867-2.031-.967-.272-.099-.47-.148-.669.15-.198.296-.767.966-.94 1.164-.174.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.019-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.668-1.612-.916-2.207-.241-.579-.486-.5-.668-.51-.174-.008-.372-.01-.57-.01-.198 0-.52.074-.792.372-.273.297-1.04 1.016-1.04 2.479 0 1.462 1.064 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.57-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413-.074-.124-.272-.198-.57-.347zm-5.422 7.403h-.004a9.87 9.87 0 0 1-5.032-1.378l-.36-.214-3.742.982.999-3.648-.235-.374a9.861 9.861 0 0 1-1.511-5.26c.002-5.45 4.436-9.884 9.889-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.892 6.993c-.002 5.45-4.436 9.885-9.884 9.885zm8.412-18.297A11.815 11.815 0 0 0 11.992 0C5.438 0 .102 5.335.1 11.892c-.001 2.096.546 4.142 1.587 5.945L0 24l6.304-1.654a11.881 11.881 0 0 0 5.684 1.448h.005c6.554 0 11.89-5.335 11.892-11.893a11.821 11.821 0 0 0-3.48-8.413"/></g><defs><clipPath id="clip0_615_275"><rect width="24" height="24"/></clipPath></defs></svg>
+                <span class="btm-nav-label text-secondary text-xs">Whatsapp</span>
+    </a>
+  </div>
+
+  <style>
+      .btm-nav{
+        padding-top: env(safe-area-inset-bottom, 7px);
+    }
+
+    .btm-nav,.btm-nav a{
+        transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+  
+
+   .is-hidden {
+    opacity:0;
+}
+.is-visible {
+    opacity:1;
+}
+  </style>

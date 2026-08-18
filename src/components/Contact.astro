@@ -1,0 +1,345 @@
+---
+import { Image } from 'astro:assets';
+
+import mail from '../assets/message.svg'
+import map from '../assets/location.svg'
+import phone  from '../assets/volume.svg'
+import clock from '../assets/clock.svg'
+---
+
+<!-- <script>
+	(function () {
+  "use strict";
+  /*
+   * Form Validation
+   */
+
+  // Fetch all the forms we want to apply custom validation styles to
+  const forms = document.querySelectorAll(".needs-validation");
+  const result = document.getElementById("result");
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms).forEach(function (form) {
+    form.addEventListener(
+      "submit",
+      function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+
+          form.querySelectorAll(":invalid")[0].focus();
+        } else {
+          /*
+           * Form Submission using fetch()
+           */
+          event.preventDefault();
+          event.stopPropagation();
+          
+          const formData = new FormData(form);
+          const object = Object.fromEntries(formData);
+          const json = JSON.stringify(object);
+          result.innerHTML = "Por favor espere...";
+
+          fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            body: json,
+          })
+            .then(async (response) => {
+              let json = await response.json();
+              if (response.status == 200) {
+              	window.location.href = "https://okcar.mx/gracias";
+
+              } else {
+                console.log(response);
+                result.innerHTML = json.message;
+                result.classList.remove("text-gray-500");
+                result.classList.add("text-red-500");
+              }
+            })
+            .catch((error) => {
+              console.log(error);
+            })
+            .then(function () {
+              form.reset();
+              form.classList.remove("was-validated");
+              setTimeout(() => {
+                result.style.display = "none";
+              }, 5000);
+            });
+        }
+
+        form.classList.add("was-validated");
+      },
+      false
+    );
+  });
+})();
+</script> -->
+
+<section id="contact" class="relative z-10 grid px-8 lg:px-24 py-16 lg:py-24">
+	<div>
+		<div class="w-full  py-12 max-w-6xl m-auto">
+			<div class="max-w-3xl lg:mx-auto lg:text-center">
+			  <div>
+				  <h3 class="text-sm text-primary tracking-widest uppercase font-semibold">
+					CONTACTO
+				</h3>
+				<p class="text-4xl mt-8 lg:text-6xl font-extrabold tracking-tight text-black">
+					Déjanos tus datos y recibe tu Demo
+
+				</p>
+			  </div>
+			  
+		  </div>
+	</div>
+			
+			<div class="grid lg:grid-cols-2 gap-8 xl:px-16  items-center">
+				<div class="grid order-last md:order-first">
+					<div class="gap-8 grid lg:max-h-[550px]  md:grid-cols-2">
+						<div id="box-contact" class="block text-center  rounded-xl p-4 pb-6">
+							<Image  src={map} class="h-max-24 aspect-square object-contain w-24 mx-auto" alt="icono svg de una mapa"/>
+
+							<span class="text-primary font-medium mt-6 text-xl mb-4">Dirección						</span>
+							<p class="">Plaza Cimatario 211, Plazas del Sol 2nda Sección. Querétaro, Qro.</p>
+						</div>
+						<div id="box-contact" class="block text-center  rounded-xl p-4 pb-6">
+							<Image  src={phone} class="h-max-24 aspect-square object-contain w-24 mx-auto" alt="icono svg de un celular"/>
+
+							<span class="text-primary font-medium mt-6 text-xl mb-4">Teléfono						</span> <br>
+								<a href="tel:4424540681" class="block md:hidden">OFICINA (442) 454 06 81</a>
+								<span class="hidden md:block">OFICINA (442) 454 06 81</span>
+						</div>
+						<div id="box-contact" class="block text-center  rounded-xl p-4 pb-6">
+							<Image  src={mail} class="h-max-24 aspect-square object-contain w-24 mx-auto" alt="icono svg de un mail"/>
+
+							<span class="text-primary font-medium mt-6 text-xl mb-4">Correo Electrónico						</span>
+							<a href="mailto:soporte@gpovertice.com">soporte@gpovertice.com</a>
+						</div>
+						<div id="box-contact" class="block text-center  rounded-xl p-4 pb-6">
+							<Image  src={clock} class="h-max-24 aspect-square object-contain w-24 mx-auto"alt="icono svg de un reloj"/>
+							<span class="text-primary font-medium text-xl mt-6 mb-4">Horario						</span>
+							<p class="">Lun - Vie: 9AM a 6PM <br> Sábado: 9AM a 2PM</p>
+						</div>
+					</div>
+				</div>
+				<div class="grid order-first md:order-last lg:min-h-screen lg:items-center ">
+					<div class="">
+					  <div class=" mx-auto bg-white  rounded-md ">
+						
+						<div class="">
+						  <form action="https://api.web3forms.com/submit" method="POST">
+							<input type="hidden" name="access_key" value="ae82fe96-2693-41bf-b377-ce90ef4e3e5a">
+							<input type="hidden" name="redirect" value="https://www.okcar.mx/gracias">
+				  
+							<div class="grid md:flex mb-4 md:space-x-4">
+							  <div class="w-full md:w-1/2">
+								<label
+								  for="fname"
+								  class="block mb-2 text-sm text-gray-600 dark:text-gray-400"
+								  >Nombre</label
+								>
+								<input
+								  type="text"
+								  name="name"
+								  id="first_name"
+								  placeholder="Sus nombres"
+								  required
+								  class="input mb-2 input-bordered border-gray-400 rounded-xl w-full"
+								/>
+								<div
+								  class="empty-feedback invalid-feedback text-red-400 text-sm mt-1"
+								>
+								Por favor, indique su nombre.
+								</div>
+							  </div>
+							  <div class="w-full md:w-1/2">
+								<label
+								  for="lname"
+								  class="block mb-2 text-sm text-gray-600 dark:text-gray-400"
+								  >¿Cómo nos conociste?</label
+								>
+								<select name="ruta" id="lname" class="input select-bordered border-gray-400 w-full " required>
+									<option disabled selected value="">¿Como nos conociste?</option>
+									<option value="Google">Google</option>
+									<option value="LinkedIn">LinkedIn</option>
+									<option value="Facebook, Instagram, TikTok">Facebook, Instagram, TikTok</option>
+									<option value="Recomendación">Recomendación</option>
+									<option value="Otro">Otro</option>
+								  </select>
+								<div
+								  class="empty-feedback invalid-feedback text-red-400 text-sm mt-1"
+								>
+								Por favor, indique por que medio conoció nuestro servicio.
+								</div>
+							  </div>
+							</div>
+				  
+							<div class="grid md:flex mb-4 md:space-x-4">
+							  <div class="w-full md:w-1/2">
+								<label
+								  for="email"
+								  class="block mb-2 text-sm text-gray-600 dark:text-gray-400"
+								  >Correo</label
+								>
+								<input
+								  type="email"
+								  name="email"
+								  id="email"
+								  placeholder="mail@empresa.com"
+								  required
+								  class="w-full input input-bordered border-gray-400 rounded-xl"
+								/>
+								<div class="empty-feedback text-red-400 text-sm mt-1">
+									Indique su dirección de correo electrónico.
+								</div>
+								<div class="invalid-feedback text-red-400 text-sm mt-1">
+								Indique una dirección de correo electrónico válida.
+								</div>
+							  </div>
+							  <div class="w-full md:w-1/2 ">
+								<label
+								  for="phone"
+								  class="block text-sm mb-2 text-gray-600 dark:text-gray-400"
+								  >Número de teléfono</label
+								>
+								<input
+								  type="text"
+								  name="phone"
+								  id="phone"
+								  placeholder="+52 (442) 454 06 81"
+								  required
+								  class="w-full input input-bordered border-gray-400 rounded-xl"
+								/>
+				  
+								<div
+								  class="empty-feedback invalid-feedback text-red-400 text-sm mt-1"
+								>
+								Indique su número de teléfono.
+								</div>
+							  </div>
+							</div>
+
+							<div class="grid md:flex mb-4 md:space-x-4">
+
+							  <div class="w-full md:w-1/2 mb-4 ">
+								<label
+								  for="direccion"
+								  class="block text-sm mb-2 text-gray-600 dark:text-gray-400"
+								  >Estado / País</label
+								>
+								<input
+								  type="text"
+								  name="direccion"
+								  id="direccion"
+								  placeholder="¿En que estado esta su taller?"
+								  required
+								  class="input input-bordered border-gray-400 w-full"
+								/>
+				  
+								<div
+								  class="empty-feedback invalid-feedback text-red-400 text-sm mt-1"
+								>
+								Indique el estado.
+								</div>
+							  </div>
+
+							  <div class="w-full md:w-1/2 mb-4 ">
+								<label
+								  for="taller"
+								  class="block text-sm mb-2 text-gray-600 dark:text-gray-400"
+								  >Nombre de la Empresa</label
+								>
+								<input
+								  type="text"
+								  name="taller"
+								  id="taller"
+								  placeholder="¿Cuál es el nombre de su empresa?"
+								  required
+								  class="input input-bordered border-gray-400 w-full"
+								/>
+				  
+								<div
+								  class="empty-feedback invalid-feedback text-red-400 text-sm mt-1"
+								>
+								Por Favor indique su nombre de empresa.
+								</div>
+							  </div>
+
+							  </div>
+							
+							  
+							<div class="mb-6">
+							  <label
+								for="¿Qué le gustaría mejorar en su taller?"
+								class="block mb-2 text-sm text-gray-600 dark:text-gray-400" 
+								>¿Qué le gustaría mejorar en su taller?</label
+							  >
+				  
+							  <textarea
+								rows="5"
+								name="¿Qué le gustaría mejorar en su taller?"
+								id="¿Qué le gustaría mejorar en su taller?"
+								placeholder="¡Puede añadir comentarios y/o preguntas, con gusto les responderemos!"
+								class="textarea textarea-bordered rounded-xl border-gray-400 h-44 w-full"
+								required
+							  ></textarea>
+							 
+							</div>
+
+							<div class="mb-6">
+							  <button  type="submit"
+								class="w-full px-3 py-4 text-white bg-primary rounded-xl focus:bg-indigo-600 focus:outline-none"
+								>
+								Enviar formulario
+							  </button>
+							</div>
+							<p class="text-base text-center text-gray-400" id="result"></p>
+						  </form>
+						</div>
+					  </div>
+					</div>
+				  </div>
+</section>
+<script src="https://www.google.com/recaptcha/api.js?render=6Lek1WoeAAAAAILHsWpWspGwS021vW41zkdj_y2E" is:inline></script>
+    <script is:inline>
+        grecaptcha.ready(function () {
+            grecaptcha.execute('6Lek1WoeAAAAAILHsWpWspGwS021vW41zkdj_y2E', {
+                    action: 'contact'
+                })
+                .then(function (token) {
+                    recaptchaResponse.value = token;
+                });
+        });
+        
+    </script>
+<style>
+#box-contact{
+	transition: transform .35s, box-shadow .35s;
+	transform: translate(0);
+	box-shadow: 0 20px 34px rgba(44, 11, 11, 0.04), 0 4px 8px rgba(44, 11, 11, 0.02), 0 10px 34px rgba(255, 52, 52, 0.05);
+}
+#box-contact:hover{
+	transform: scale(.97);
+    box-shadow: 0 5px 18px rgba(44, 11, 11, 0.04), 0 1px 2px rgba(44, 11, 11, 0.02), 0 3px 15px rgba(255, 52, 52, 0.05);
+}
+	.invalid-feedback,
+.empty-feedback {
+  display: none;
+}
+
+.was-validated :placeholder-shown:invalid ~ .empty-feedback {
+  display: block;
+}
+
+.was-validated :not(:placeholder-shown):invalid ~ .invalid-feedback {
+  display: block;
+}
+
+.is-invalid,
+.was-validated :invalid {
+  border-color: #dc3545;
+}
+</style>
